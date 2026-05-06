@@ -45,3 +45,9 @@ var completionTrend = "js/completion_trend.vg.json";
 vegaEmbed("#completion_trend", completionTrend)
   .then(function(result) {})
   .catch(console.error);
+
+// Section 9 - Gender Gap Chart
+var genderChart = "js/gender_chart.vg.json";
+vegaEmbed("#gender_chart", genderChart)
+  .then(function(result) {})
+  .catch(console.error);

@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Primary School Completion Rate by Gender (2022)",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  },
+  "width": 550,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/gender_completion.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.sex == 'Female' ? '👧' : '👦'",
+      "as": "emoji"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "strokeWidth": 1,
+        "color": "#ddd",
+        "opacity": 0.8
+      },
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "sort": {
+            "field": "completion",
+            "op": "mean",
+            "order": "descending"
+          }
+        },
+        "x": {
+          "field": "completion",
+          "type": "quantitative"
+        },
+        "detail": {"field": "state"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 18
+      },
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "completion",
+            "op": "mean",
+            "order": "descending"
+          },
+          "axis": {"labelFontSize": 12}
+        },
+        "x": {
+          "field": "completion",
+          "type": "quantitative",
+          "title": "Completion Rate (%)",
+          "scale": {"domain": [85, 115]},
+          "axis": {"format": ".1f"}
+        },
+        "text": {"field": "emoji", "type": "nominal"},
+        "color": {
+          "field": "sex",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Female", "Male"],
+            "range": ["#e83e8c", "#1a3a5c"]
+          },
+          "legend": {
+            "title": "Gender",
+            "labelExpr": "datum.value == 'Female' ? '👧 Female' : '👦 Male'",
+            "orient": "bottom"
+          }
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "sex", "type": "nominal", "title": "Gender"},
+          {
+            "field": "completion",
+            "type": "quantitative",
+            "title": "Completion Rate (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 4],
+        "color": "#e8405a",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {"datum": 100}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": true, "gridColor": "#f5f5f5"}
+  }
+}
