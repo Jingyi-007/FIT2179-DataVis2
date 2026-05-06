@@ -1,0 +1,49 @@
+state,stage,completion
+Johor,Primary,99.0
+Johor,Secondary Lower,100.1
+Johor,Secondary Upper,98.1
+Kedah,Primary,101.1
+Kedah,Secondary Lower,99.4
+Kedah,Secondary Upper,99.2
+Kelantan,Primary,98.2
+Kelantan,Secondary Lower,99.0
+Kelantan,Secondary Upper,99.4
+Melaka,Primary,99.5
+Melaka,Secondary Lower,98.9
+Melaka,Secondary Upper,97.7
+Negeri Sembilan,Primary,101.6
+Negeri Sembilan,Secondary Lower,99.9
+Negeri Sembilan,Secondary Upper,100.4
+Pahang,Primary,96.5
+Pahang,Secondary Lower,98.7
+Pahang,Secondary Upper,100.0
+Perak,Primary,99.9
+Perak,Secondary Lower,99.2
+Perak,Secondary Upper,100.3
+Perlis,Primary,105.5
+Perlis,Secondary Lower,99.7
+Perlis,Secondary Upper,97.9
+Pulau Pinang,Primary,97.7
+Pulau Pinang,Secondary Lower,98.9
+Pulau Pinang,Secondary Upper,100.5
+Sabah,Primary,100.6
+Sabah,Secondary Lower,99.6
+Sabah,Secondary Upper,99.6
+Sarawak,Primary,100.7
+Sarawak,Secondary Lower,99.0
+Sarawak,Secondary Upper,98.9
+Selangor,Primary,98.6
+Selangor,Secondary Lower,98.1
+Selangor,Secondary Upper,99.3
+Terengganu,Primary,103.8
+Terengganu,Secondary Lower,99.7
+Terengganu,Secondary Upper,99.0
+W.P. Kuala Lumpur,Primary,93.8
+W.P. Kuala Lumpur,Secondary Lower,96.4
+W.P. Kuala Lumpur,Secondary Upper,97.5
+W.P. Labuan,Primary,92.4
+W.P. Labuan,Secondary Lower,102.8
+W.P. Labuan,Secondary Upper,99.3
+W.P. Putrajaya,Primary,102.9
+W.P. Putrajaya,Secondary Lower,103.2
+W.P. Putrajaya,Secondary Upper,101.7
