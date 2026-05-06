@@ -25,3 +25,7 @@ vegaEmbed("#heatmap", heatmap)
 // Section 5 - Enrolment Trend Line Chart
 var lineChart = "js/line_chart.vg.json";
 vegaEmbed("#line_chart", lineChart).then(function(result) {}).catch(console.error);
+
+// Section 6 - Stacked Bar for enrollment by state comparison
+var stackedBar = "js/stacked_bar.vg.json";
+vegaEmbed("#stacked_bar", stackedBar).then(function(result) {}).catch(console.error);
