@@ -1,0 +1,106 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "School Access vs Completion Rate by State (2022)",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  },
+  "width": 600,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/bubble_chart.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "opacity": 0.8,
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {
+          "field": "total_schools",
+          "type": "quantitative",
+          "title": "Number of Schools",
+          "axis": {
+            "format": ",",
+            "tickCount": 8
+            }
+        },
+        "y": {
+          "field": "completion",
+          "type": "quantitative",
+          "title": "Primary Completion Rate (%)",
+          "scale": {"domain": [88, 110]},
+          "axis": {"format": ".1f"}
+        },
+        "size": {
+          "field": "total_students",
+          "type": "quantitative",
+          "title": "Total Students",
+          "scale": {"range": [100, 3000]},
+          "legend": {
+            "title": "Total Students",
+            "format": ","
+          }
+        },
+        "color": {
+          "field": "region",
+          "type": "nominal",
+          "title": "Region",
+          "scale": {
+            "domain": ["West Malaysia", "East Malaysia"],
+            "range": ["#583722", "#bdd7de"]
+          },
+          "legend": {"title": "Region"}
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "total_schools", "type": "quantitative",
+           "title": "No. of Schools", "format": ","},
+          {"field": "completion", "type": "quantitative",
+           "title": "Completion Rate (%)", "format": ".1f"},
+          {"field": "total_students", "type": "quantitative",
+           "title": "Total Students", "format": ","},
+          {"field": "region", "type": "nominal", "title": "Region"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dy": -12,
+        "fontSize": 10,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "total_schools",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "completion",
+          "type": "quantitative"
+        },
+        "text": {"field": "state", "type": "nominal"},
+        "color": {"value": "#333"}
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 4],
+        "color": "#e8405a",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": {"datum": 100}
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": true, "gridColor": "#f5f5f5"}
+  }
+}

@@ -1,11 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Number of Public Schools by State and Education Level (2022)",
+    "text": "Public Schools Distribution by State & Level (2022)\nDarker colour indicates more schools.",
     "fontSize": 16,
-    "fontWeight": "bold"
+    "fontWeight": "bold",
+    "limit": 60
   },
-  "width": 300,
+  "width": 400,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_heatmap.csv"

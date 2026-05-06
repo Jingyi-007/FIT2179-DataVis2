@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,15 +23,16 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Open Sans', sans-serif;
       background-color: #f4f6f9;
       color: #333;
     }
 
     /* ── Header ── */
     header {
+      font-family: 'Poppins', sans-serif;
       background-color: #1a3a5c;
-      color: white;
+      color: #d3dff2;
       text-align: center;
       padding: 40px 20px;
     }
@@ -47,14 +49,23 @@
       margin: 0 auto;
     }
 
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
     /* ── Section ── */
     .section {
+      font-family: 'Poppins', sans-serif;
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
     .section h2 {
+      font-family: 'Poppins', sans-serif;
       font-size: 1.5rem;
       color: #1a3a5c;
       margin-bottom: 8px;
@@ -64,7 +75,7 @@
 
     .section p {
       font-size: 0.95rem;
-      color: #555;
+      color: #333;
       margin-bottom: 20px;
       line-height: 1.6;
     }
@@ -75,10 +86,18 @@
       border-radius: 10px;
       padding: 24px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      display: flex;
-      justify-content: center;  
-      align-items: center;      
-      overflow: hidden;
+      
+      display: block;          
+      overflow-x: auto;  
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .grid-2 > div {
+      min-width: 0;
     }
     
 
@@ -130,6 +149,36 @@
   <p>A closer look at the distribution of primary public schools across Malaysian states.</p>
   <div class="chart-container">
     <div id="malaysia_map"></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>Distribution of Schools and Students</h2>
+  <p>
+    States with more schools generally have higher student enrolment, 
+    though population density also plays a role.
+  </p>
+
+  <div class="grid-2">
+    
+    <!-- LEFT COLUMN -->
+    <div>
+      <h3>Public Schools Distribution by State (2022)</h3>
+      <p>Darker colour indicates more schools. Sabah and Sarawak have the most.</p>
+      <div class="chart-container">
+        <div id="heatmap"></div>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div>
+      <h3>Student Enrolment by State (2022)</h3>
+      <p>Selangor has the highest enrolment followed by Johor and Sabah.</p>
+      <div class="chart-container">
+        <div id="stacked_bar"></div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -200,12 +249,25 @@
   </div>
 </div>
 
+<!-- Section 10: Bubble Chart -->
+<div class="section">
+  <h2>School Access vs Completion Rate (2022)</h2>
+  <p>Each bubble represents a Malaysian state. Bubble size indicates 
+     total student enrolment. States with more schools generally 
+     maintain high completion rates. W.P. Kuala Lumpur and W.P. Labuan 
+     are notable outliers with lower completion despite urban location.</p>
+  <div class="chart-container">
+    <div id="bubble_chart"></div>
+  </div>
+</div>
+
 
 
 
   <!-- Footer -->
   <footer>
     <p>FIT2179 Data Visualisation | Data source: Kaggle & OpenDOSM</p>
+    <p>By Loh Jing Yi | May 2026 </p>
   </footer>
 
 </body>

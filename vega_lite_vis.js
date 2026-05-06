@@ -51,3 +51,9 @@ var genderChart = "js/gender_chart.vg.json";
 vegaEmbed("#gender_chart", genderChart)
   .then(function(result) {})
   .catch(console.error);
+
+// Section 10 - Bubble Chart
+var bubbleChart = "js/bubble_chart.vg.json";
+vegaEmbed("#bubble_chart", bubbleChart)
+  .then(function(result) {})
+  .catch(console.error);

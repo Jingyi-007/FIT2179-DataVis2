@@ -36,7 +36,7 @@
           "title": "Education Level",
           "scale": {
             "domain": ["Primary", "Secondary", "Post Secondary"],
-            "range": ["#2e4265", "#8599ab", "#533a33"]
+            "range": ["#43302e", "#c1dbe8", "#fbe29d"]
           }
         },
         "tooltip": [
@@ -76,7 +76,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Primary", "Secondary", "Post Secondary"],
-            "range": ["#2e4265", "#8599ab", "#533a33"]
+            "range": ["#ffffff", "#c1dbe8", "#43302e"]
           }
         }
       }

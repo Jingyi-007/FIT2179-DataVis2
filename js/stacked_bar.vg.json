@@ -3,9 +3,10 @@
   "title": {
     "text": "Student Enrolment by State and Education Level (2022)",
     "fontSize": 16,
-    "fontWeight": "bold"
+    "fontWeight": "bold",
+    "limit": 60
   },
-  "width": 500,
+  "width": 400,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/enrolment_by_state.csv"
@@ -34,7 +35,7 @@
       "title": "Education Level",
       "scale": {
         "domain": ["Primary", "Secondary", "Post Secondary"],
-        "range":["#2e4265", "#8599ab", "#bfaca3"]
+        "range":["#43302e", "#c1dbe8", "#fbe29d"]
       },
       "legend": {"title": "Education Level"}
     },
