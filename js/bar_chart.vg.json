@@ -1,0 +1,72 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Top 10 and Bottom 10 Countries by Literacy Rate (with Malaysia)",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  },
+  "width": 600,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/Literacy_Rate_with_id.csv"
+  },
+  "transform": [
+    {
+      "window": [{"op": "row_number", "as": "row_top"}],
+      "sort": [{"field": "Literacy Rate", "order": "descending"},
+               {"field": "Country", "order": "ascending"}]
+    },
+    {
+      "window": [{"op": "row_number", "as": "row_bottom"}],
+      "sort": [{"field": "Literacy Rate", "order": "ascending"},
+               {"field": "Country", "order": "ascending"}]
+    },
+    {
+      "filter": "datum.row_top <= 10 || datum.row_bottom <= 10 || datum.Country == 'Malaysia'"
+    },
+    {
+      "calculate": "datum.Country == 'Malaysia' ? 'Malaysia' : datum.row_top <= 10 ? 'Top 10' : 'Bottom 10'",
+      "as": "Group"
+    }
+  ],
+  "mark": {"type": "bar", "cornerRadiusEnd": 4},
+  "encoding": {
+    "x": {
+      "field": "Literacy Rate",
+      "type": "quantitative",
+      "title": "Literacy Rate",
+      "axis": {"format": ".0%"},
+      "scale": {"domain": [0, 1]}
+    },
+    "y": {
+      "field": "Country",
+      "type": "nominal",
+      "sort": "-x",
+      "title": null
+    },
+    "color": {
+      "field": "Group",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Top 10", "Malaysia", "Bottom 10"],
+        "range": ["#1a3a5c", "#f0a500", "#e05c2a"]
+      },
+      "legend": {"title": "Group"}
+    },
+    "opacity": {
+      "condition": {"test": "datum.Country == 'Malaysia'", "value": 1},
+      "value": 0.8
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Country"},
+      {
+        "field": "Literacy Rate",
+        "type": "quantitative",
+        "title": "Literacy Rate",
+        "format": ".1%"
+      },
+      {"field": "Year", "type": "quantitative", "title": "Year"},
+      {"field": "Group", "type": "nominal", "title": "Group"}
+    ]
+  }
+}

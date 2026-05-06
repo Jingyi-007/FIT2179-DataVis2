@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Vega-Lite Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+  <!-- Your JS -->
+  <script src="vega_lite_vis.js"></script>
+
+  <title>Global Literacy & Education</title>
+
+  <style>
+    /* ── General Reset ── */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+    }
+
+    /* ── Header ── */
+    header {
+      background-color: #1a3a5c;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.85;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ── Section ── */
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: #1a3a5c;
+      margin-bottom: 8px;
+      border-left: 4px solid #1a3a5c;
+      padding-left: 12px;
+    }
+
+    .section p {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    /* ── Chart Container ── */
+    .chart-container {
+      background: white;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+      color: #999;
+      margin-top: 60px;
+      border-top: 1px solid #ddd;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Global Literacy & Education Access</h1>
+    <p>Exploring how access to public education affects literacy outcomes 
+       globally and in Malaysia</p>
+  </header>
+
+  <!-- Section 1: Choropleth Map -->
+  <div class="section">
+    <h2>Global Literacy Rates</h2>
+    <p>Countries with stronger public education systems tend to achieve 
+       near-universal literacy. Grey countries indicate no available data.</p>
+    <div class="chart-container">
+      <div id="choropleth_map"></div>
+    </div>
+  </div>
+
+  <!-- Section 2: Top & Bottom Countries -->
+  <div class="section">
+    <h2>Top 10 vs Bottom 10 Countries</h2>
+    <p>Malaysia is highlighted in gold for comparison against the world's 
+       highest and lowest literacy rate countries.</p>
+    <div class="chart-container">
+      <div id="bar_chart"></div>
+    </div>
+  </div>
+</div>
+
+<div id="malaysia_map"></div> 
+
+  <!-- Footer -->
+  <footer>
+    <p>FIT2179 Data Visualisation | Data source: UNESCO Institute for Statistics</p>
+  </footer>
+
+</body>
+</html>

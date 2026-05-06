@@ -1,0 +1,54 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Number of Primary Public Schools by State in Malaysia (2022)",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  },
+  "width": 800,
+  "height": 400,
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "js/malaysia_state.json",
+        "format": {"type": "topojson", "feature": "malaysia.state"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "white",
+        "strokeWidth": 1
+      }
+    },
+    {
+      "data": {
+        "url": "js/malaysia_state.json",
+        "format": {"type": "topojson", "feature": "malaysia.state"}
+      },
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": {"url": "data/schools_by_state_2022.csv"},
+            "key": "state",
+            "fields": ["schools"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 1},
+      "encoding": {
+        "color": {
+          "field": "schools",
+          "type": "quantitative",
+          "scale": {"scheme": "blues"},
+          "legend": {"title": "No. of Schools"}
+        },
+        "tooltip": [
+          {"field": "properties.name", "type": "nominal", "title": "State"},
+          {"field": "schools", "type": "quantitative", "title": "No. of Schools"}
+        ]
+      }
+    }
+  ]
+}

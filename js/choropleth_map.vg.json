@@ -1,0 +1,70 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Global Literacy Rates",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  },
+  "width": 800,
+  "height": 400,
+  "padding": {"right": 120},
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#d0d0d0",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",
+        "format": {"type": "topojson", "feature": "countries"}
+      },
+      "transform": [
+        {
+          "lookup": "id",
+          "from": {
+            "data": {
+              "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/Literacy_Rate_with_id.csv"
+            },
+            "key": "id",
+            "fields": ["Country", "Literacy Rate", "Year"]
+          }
+        }
+      ],
+      "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+      "encoding": {
+        "color": {
+          "field": "Literacy Rate",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "blues",
+            "domain": [0, 1]
+          },
+          "legend": {
+            "title": "Literacy Rate",
+            "format": ".0%",
+            "orient": "bottom-right"
+          }
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {
+            "field": "Literacy Rate",
+            "type": "quantitative",
+            "title": "Literacy Rate",
+            "format": ".1%"
+          },
+          {"field": "Year", "type": "quantitative", "title": "Year"}
+        ]
+      }
+    }
+  ]
+}
