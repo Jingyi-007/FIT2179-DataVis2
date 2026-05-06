@@ -13,18 +13,7 @@ vegaEmbed("#malaysia_map", malaysiaMap)
   .then(function(result) {})
   .catch(console.error);
 
-var treemapPrimary = "js/treemap_primary.vg.json";
-var treemapSecondary = "js/treemap_secondary.vg.json";
-var barTertiary = "js/bar_tertiary.vg.json";
-
-vegaEmbed("#treemap_primary", treemapPrimary)
-  .then(function(result) {})
-  .catch(console.error);
-
-vegaEmbed("#treemap_secondary", treemapSecondary)
-  .then(function(result) {})
-  .catch(console.error);
-
-vegaEmbed("#bar_tertiary", barTertiary)
+var heatmap = "js/heatmap.vg.json";
+vegaEmbed("#heatmap", heatmap)
   .then(function(result) {})
   .catch(console.error);

@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Number of Public Schools by State and Education Level (2022)",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  },
+  "width": 300,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_heatmap.csv"
+  },
+  "transform": [
+    {
+      "calculate": "upper(slice(datum.stage, 0, 1)) + slice(datum.stage, 1)",
+      "as": "Stage"
+    }
+  ],
+  "mark": {"type": "rect", "cornerRadius": 3},
+  "encoding": {
+    "y": {
+      "field": "state",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "schools",
+        "op": "sum",
+        "order": "descending"
+      }
+    },
+    "x": {
+      "field": "Stage",
+      "type": "nominal",
+      "title": null,
+      "sort": ["Primary", "Secondary", "Tertiary"],
+      "axis": {"labelAngle": 0}
+    },
+    "color": {
+      "field": "schools",
+      "type": "quantitative",
+      "title": "No. of Schools",
+      "scale": {
+        "type" : "log",
+        "scheme": "purpleblue"
+      },
+
+      "legend": {"title": "No. of Schools"}
+    },
+    "tooltip": [
+      {"field": "state", "type": "nominal", "title": "State"},
+      {"field": "Stage", "type": "nominal", "title": "Level"},
+      {"field": "schools", "type": "quantitative", "title": "No. of Schools"}
+    ]
+  },
+  "config": {
+    "axis": {"grid": false},
+    "view": {"stroke": null}
+  }
+}
