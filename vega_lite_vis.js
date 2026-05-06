@@ -39,3 +39,9 @@ var completionDotPlot = "js/completion_dotplot.vg.json";
 vegaEmbed("#completion_dot_plot", completionDotPlot)
   .then(function(result) {})
   .catch(console.error);
+
+// Section 8 - Completion Trend Line Chart
+var completionTrend = "js/completion_trend.vg.json";
+vegaEmbed("#completion_trend", completionTrend)
+  .then(function(result) {})
+  .catch(console.error);

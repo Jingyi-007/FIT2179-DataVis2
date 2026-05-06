@@ -1,0 +1,118 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "School Completion Rate Trend in Malaysia (2016-2022)",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  },
+  "width": 600,
+  "height": 350,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/completion_trend.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": true,
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {"labelAngle": 0}
+        },
+        "y": {
+          "field": "completion",
+          "type": "quantitative",
+          "title": "Completion Rate (%)",
+          "scale": {"domain": [88, 102]},
+          "axis": {"format": ".1f"}
+        },
+        "color": {
+          "field": "stage",
+          "type": "nominal",
+          "title": "Education Level",
+          "scale": {
+            "domain": ["Primary", "Secondary Lower", "Secondary Upper"],
+            "range": ["#1a3a5c", "#e05c2a", "#2ecc71"]
+          }
+        },
+        "tooltip": [
+          {"field": "year", "type": "ordinal", "title": "Year"},
+          {"field": "stage", "type": "nominal", "title": "Level"},
+          {
+            "field": "completion",
+            "type": "quantitative",
+            "title": "Completion Rate (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 4],
+        "color": "red",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "y": {"datum": 100}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "fontWeight": "bold"
+      },
+      "transform": [
+        {"filter": "datum.year == 2022"}
+      ],
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {
+          "field": "completion",
+          "type": "quantitative"
+        },
+        "text": {"field": "stage", "type": "nominal"},
+        "color": {
+          "field": "stage",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Primary", "Secondary Lower", "Secondary Upper"],
+            "range": ["#1a3a5c", "#e05c2a", "#2ecc71"]
+          }
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "dy": -10,
+        "fontSize": 10,
+        "color": "red",
+        "fontWeight": "bold"
+      },
+      "transform": [
+        {
+          "filter": "datum.year == 2020 && datum.stage == 'Secondary Upper'"
+        }
+      ],
+      "encoding": {
+        "x": {"field": "year", "type": "ordinal"},
+        "y": {
+          "field": "completion",
+          "type": "quantitative"
+        },
+        "text": {"value": "⚠ COVID-19 Impact"}
+      }
+    }
+  ]
+}
