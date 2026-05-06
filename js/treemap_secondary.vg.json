@@ -1,0 +1,111 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 500,
+  "height": 350,
+  "padding": 5,
+  "title": {
+    "text": "Secondary Public Schools by State (2022)",
+    "fontSize": 14,
+    "fontWeight": "bold"
+  },
+  "data": [
+    {
+      "name": "tree",
+      "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_secondary.csv",
+      "format": {"type": "csv"},
+      "transform": [
+        {
+          "type": "treemap",
+          "field": "schools",
+          "sort": {"field": "schools", "order": "descending"},
+          "round": true,
+          "method": "squarify",
+          "size": [{"signal": "width"}, {"signal": "height"}]
+        }
+      ]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "tree", "field": "state"},
+      "range": [
+        "#7d1a1a","#a93226","#c0392b","#e74c3c",
+        "#f1948a","#fadbd8","#641e16","#922b21",
+        "#cb4335","#b03a2e","#d98880","#e6b0aa",
+        "#f5b7b1","#cd6155","#ec7063","#f1948a"
+      ]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {
+          "stroke": {"value": "white"},
+          "strokeWidth": {"value": 1.5}
+        },
+        "update": {
+          "x": {"field": "x0"},
+          "y": {"field": "y0"},
+          "x2": {"field": "x1"},
+          "y2": {"field": "y1"},
+          "fill": {"scale": "color", "field": "state"},
+          "tooltip": {
+            "signal": "{'State': datum.state, 'Secondary Schools': datum.schools}"
+          }
+        },
+        "hover": {
+          "strokeWidth": {"value": 3},
+          "stroke": {"value": "#333"}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {
+          "font": {"value": "Arial"},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fill": {"value": "white"},
+          "fontWeight": {"value": "bold"},
+          "fontSize": {"value": 11}
+        },
+        "update": {
+          "x": {"signal": "0.5 * (datum.x0 + datum.x1)"},
+          "y": {"signal": "0.5 * (datum.y0 + datum.y1)"},
+          "text": {
+            "signal": "(datum.x1 - datum.x0) > 60 ? datum.state : ''"
+          },
+          "tooltip": {
+            "signal": "{'State': datum.state, 'Secondary Schools': datum.schools}"
+          }
+        }
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "tree"},
+      "encode": {
+        "enter": {
+          "font": {"value": "Arial"},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fill": {"value": "white"},
+          "fontSize": {"value": 10}
+        },
+        "update": {
+          "x": {"signal": "0.5 * (datum.x0 + datum.x1)"},
+          "y": {"signal": "0.5 * (datum.y0 + datum.y1) + 14"},
+          "text": {
+            "signal": "(datum.x1 - datum.x0) > 60 ? datum.schools : ''"
+          }
+        }
+      }
+    }
+  ]
+}
