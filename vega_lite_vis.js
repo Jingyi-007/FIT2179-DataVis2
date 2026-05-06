@@ -13,11 +13,6 @@ vegaEmbed("#malaysia_map", malaysiaMap)
   .then(function(result) {})
   .catch(console.error);
 
-var treemap = "js/treemap.vg.json";
-vegaEmbed("#treemap", treemap)
-  .then(function(result) {})
-  .catch(console.error);
-
 var treemapPrimary = "js/treemap_primary.vg.json";
 var treemapSecondary = "js/treemap_secondary.vg.json";
 var barTertiary = "js/bar_tertiary.vg.json";

@@ -1,10 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "width": 500,
+  "width": 450,
   "height": 350,
   "padding": 5,
   "title": {
-    "text": "Primary Public Schools by State (2022)",
+    "text": "Primary Schools by State (2022)",
     "fontSize": 14,
     "fontWeight": "bold"
   },
@@ -12,7 +12,7 @@
     {
       "name": "tree",
       "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_primary.csv",
-      "format": {"type": "csv"},
+      "format": {"type": "csv", "parse": {"schools": "number"}},
       "transform": [
         {
           "type": "treemap",

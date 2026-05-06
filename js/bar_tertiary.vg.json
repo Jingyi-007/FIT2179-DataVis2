@@ -27,7 +27,7 @@
     "color": {
       "field": "schools",
       "type": "quantitative",
-      "scale": {"scheme": "greens"},
+      "scale": {"scheme": "blues"},
       "legend": null
     },
     "tooltip": [

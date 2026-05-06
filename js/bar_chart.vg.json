@@ -49,7 +49,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["Top 10", "Malaysia", "Bottom 10"],
-        "range": ["#1a3a5c", "#f0a500", "#e05c2a"]
+        "range": ["#c8d9e6", "#2f4156", "#f5efeb"]
       },
       "legend": {"title": "Group"}
     },
