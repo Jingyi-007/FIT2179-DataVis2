@@ -7,6 +7,7 @@
   },
   "width": 800,
   "height": 450,
+  "padding": {"left": 50, "top": 20},
   "projection": {"type": "equirectangular"},
   "layer": [
     {

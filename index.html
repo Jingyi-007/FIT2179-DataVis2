@@ -77,7 +77,12 @@
       border-radius: 10px;
       padding: 24px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: center;  
+      align-items: center;      
+      overflow: hidden;
     }
+    
 
     /* ── Footer ── */
     footer {
@@ -95,7 +100,7 @@
 
   <!-- Header -->
   <header>
-    <h1>Global Literacy & Education Access</h1>
+    <h1>Bridging the Gap: Education Access Across Malaysia</h1>
     <p>Exploring how access to public education affects literacy outcomes 
        globally and in Malaysia</p>
   </header>
@@ -121,11 +126,18 @@
   </div>
 </div>
 
-<div id="malaysia_map"></div> 
+<!-- Section 3: Malaysia School State Map -->
+<div class="section">
+  <h2>Malaysia's Education Landscape</h2>
+  <p>A closer look at the distribution of primary public schools across Malaysian states.</p>
+  <div class="chart-container">
+    <div id="malaysia_map"></div>
+  </div>
+</div>
 
   <!-- Footer -->
   <footer>
-    <p>FIT2179 Data Visualisation | Data source: UNESCO Institute for Statistics</p>
+    <p>FIT2179 Data Visualisation | Data source: Kaggle & OpenDOSM</p>
   </footer>
 
 </body>
