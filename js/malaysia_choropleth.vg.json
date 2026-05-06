@@ -6,8 +6,8 @@
     "fontWeight": "bold"
   },
   "width": 800,
-  "height": 400,
-  "projection": {"type": "equalEarth"},
+  "height": 450,
+  "projection": {"type": "equirectangular"},
   "layer": [
     {
       "data": {
@@ -23,14 +23,16 @@
     },
     {
       "data": {
-        "url": "js/malaysia_state.json",
+        "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/js/malaysia_state.json",
         "format": {"type": "topojson", "feature": "malaysia.state"}
       },
       "transform": [
         {
           "lookup": "properties.name",
           "from": {
-            "data": {"url": "data/schools_by_state_2022.csv"},
+            "data": {
+              "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_by_state_2022.csv"
+            },
             "key": "state",
             "fields": ["schools"]
           }
