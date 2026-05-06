@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "School Completion Rates by State and Level (2022)",
+    "fontSize": 16,
+    "fontWeight": "bold"
+  },
+  "width": 500,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/completion_by_state.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [4, 4],
+        "color": "red",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "x": {"datum": 100}
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 100,
+        "opacity": 0.9
+      },
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "title": null,
+          "sort": {
+            "field": "completion",
+            "op": "mean",
+            "order": "descending"
+          },
+          "axis": {"labelFontSize": 12}
+        },
+        "x": {
+          "field": "completion",
+          "type": "quantitative",
+          "title": "Completion Rate (%)",
+          "scale": {"domain": [85, 110]},
+          "axis": {"format": ".1f", "labelFontSize": 11}
+        },
+        "color": {
+          "field": "stage",
+          "type": "nominal",
+          "title": "Education Level",
+          "scale": {
+            "domain": ["Primary", "Secondary Lower", "Secondary Upper"],
+            "range": ["#1a3a5c", "#e05c2a", "#2ecc71"]
+          },
+          "legend": {
+            "title": "Education Level",
+            "orient": "bottom"
+          }
+        },
+        "shape": {
+          "field": "stage",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Primary", "Secondary Lower", "Secondary Upper"],
+            "range": ["circle", "square", "triangle"]
+          }
+        },
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "stage", "type": "nominal", "title": "Level"},
+          {
+            "field": "completion",
+            "type": "quantitative",
+            "title": "Completion Rate (%)",
+            "format": ".1f"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": true, "gridColor": "#f0f0f0"}
+  }
+}
