@@ -34,8 +34,8 @@ vegaEmbed("#stacked_bar", stackedBar)
   .then(function(result) {})
   .catch(console.error);
 
-// Section 7 - Completion Bar Chart
-var completionBar = "js/completion_bar.vg.json";
-vegaEmbed("#completion_bar", completionBar)
+// Section 7 - Completion Dot Plot
+var completionDotPlot = "js/completion_dotplot.vg.json";
+vegaEmbed("#completion_dot_plot", completionDotPlot)
   .then(function(result) {})
   .catch(console.error);
