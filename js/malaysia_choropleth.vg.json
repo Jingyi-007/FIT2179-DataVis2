@@ -11,7 +11,7 @@
   "layer": [
     {
       "data": {
-        "url": "js/malaysia_state.json",
+        "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/js/malaysia_state.json",
         "format": {"type": "topojson", "feature": "malaysia.state"}
       },
       "mark": {
