@@ -5,8 +5,8 @@
     "fontSize": 16,
     "fontWeight": "bold"
   },
-  "width": 600,
-  "height": 350,
+  "width": 350,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/enrolment_trend.csv"
   },
@@ -36,7 +36,7 @@
           "title": "Education Level",
           "scale": {
             "domain": ["Primary", "Secondary", "Post Secondary"],
-            "range": ["#43302e", "#c1dbe8", "#fbe29d"]
+            "range": ["#faf0ca", "#c1dbe8", "#6a4a3a"]
           }
         },
         "tooltip": [
@@ -76,7 +76,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Primary", "Secondary", "Post Secondary"],
-            "range": ["#ffffff", "#c1dbe8", "#43302e"]
+            "range":["#faf0ca", "#c1dbe8", "#6a4a3a"]
           }
         }
       }

@@ -5,8 +5,8 @@
     "fontSize": 16,
     "fontWeight": "bold"
   },
-  "width": 500,
-  "height": 450,
+  "width": 300,
+  "height": 350,
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/completion_by_state.csv"
   },
@@ -54,7 +54,7 @@
           "title": "Education Level",
           "scale": {
             "domain": ["Primary", "Secondary Lower", "Secondary Upper"],
-            "range": ["#43302e", "#c1dbe8", "#fbe29d"]
+            "range": ["#fbe29d", "#c1dbe8", "#6a4a3a"]
           },
           "legend": {
             "title": "Education Level",

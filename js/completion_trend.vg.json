@@ -40,7 +40,7 @@
           "title": "Education Level",
           "scale": {
             "domain": ["Primary", "Secondary Lower", "Secondary Upper"],
-            "range": ["#43302e", "#c1dbe8", "#fbe29d"]
+            "range":["#faf0ca", "#c1dbe8", "#6a4a3a"]
           }
         },
         "tooltip": [

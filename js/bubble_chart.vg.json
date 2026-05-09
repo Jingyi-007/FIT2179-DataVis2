@@ -51,7 +51,7 @@
           "title": "Region",
           "scale": {
             "domain": ["West Malaysia", "East Malaysia"],
-            "range": ["#583722", "#bdd7de"]
+            "range": ["#cfb59e", "#bdd7de"]
           },
           "legend": {"title": "Region"}
         },
