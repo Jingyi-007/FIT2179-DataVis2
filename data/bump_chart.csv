@@ -1,0 +1,113 @@
+state,year,completion,rank
+Johor,2016,99.06,8
+Johor,2017,99.14,7
+Johor,2018,97.56,11
+Johor,2019,97.7,11
+Johor,2020,98.2,11
+Johor,2021,95.5,11
+Johor,2022,99.0,10
+Kedah,2016,99.97,5
+Kedah,2017,100.12,3
+Kedah,2018,100.34,2
+Kedah,2019,100.2,3
+Kedah,2020,100.1,4
+Kedah,2021,97.2,9
+Kedah,2022,101.1,5
+Kelantan,2016,100.32,4
+Kelantan,2017,100.17,2
+Kelantan,2018,99.32,5
+Kelantan,2019,99.9,4
+Kelantan,2020,99.5,7
+Kelantan,2021,100.2,4
+Kelantan,2022,98.2,12
+Melaka,2016,98.92,9
+Melaka,2017,98.87,11
+Melaka,2018,98.92,9
+Melaka,2019,98.7,9
+Melaka,2020,98.5,10
+Melaka,2021,95.1,12
+Melaka,2022,99.5,9
+Negeri Sembilan,2016,98.29,11
+Negeri Sembilan,2017,98.95,9
+Negeri Sembilan,2018,99.24,6
+Negeri Sembilan,2019,98.9,8
+Negeri Sembilan,2020,100.1,5
+Negeri Sembilan,2021,102.9,3
+Negeri Sembilan,2022,101.6,4
+Pahang,2016,97.72,12
+Pahang,2017,97.57,12
+Pahang,2018,97.13,12
+Pahang,2019,96.3,12
+Pahang,2020,97.0,13
+Pahang,2021,97.3,8
+Pahang,2022,96.5,14
+Perak,2016,98.83,10
+Perak,2017,98.9,10
+Perak,2018,98.09,10
+Perak,2019,98.6,10
+Perak,2020,99.1,8
+Perak,2021,98.8,6
+Perak,2022,99.9,8
+Perlis,2016,101.66,2
+Perlis,2017,99.22,6
+Perlis,2018,99.61,4
+Perlis,2019,99.0,7
+Perlis,2020,98.8,9
+Perlis,2021,96.9,10
+Perlis,2022,105.5,1
+Pulau Pinang,2016,96.55,14
+Pulau Pinang,2017,96.71,13
+Pulau Pinang,2018,96.52,13
+Pulau Pinang,2019,96.0,14
+Pulau Pinang,2020,96.9,14
+Pulau Pinang,2021,94.0,14
+Pulau Pinang,2022,97.7,13
+Sabah,2016,99.75,6
+Sabah,2017,99.04,8
+Sabah,2018,99.12,8
+Sabah,2019,100.3,2
+Sabah,2020,100.3,3
+Sabah,2021,97.7,7
+Sabah,2022,100.6,7
+Sarawak,2016,99.4,7
+Sarawak,2017,99.54,5
+Sarawak,2018,99.23,7
+Sarawak,2019,99.9,5
+Sarawak,2020,99.9,6
+Sarawak,2021,100.1,5
+Sarawak,2022,100.7,6
+Selangor,2016,96.86,13
+Selangor,2017,96.03,14
+Selangor,2018,95.56,14
+Selangor,2019,96.1,13
+Selangor,2020,97.3,12
+Selangor,2021,104.5,1
+Selangor,2022,98.6,11
+Terengganu,2016,100.43,3
+Terengganu,2017,100.06,4
+Terengganu,2018,99.87,3
+Terengganu,2019,100.7,1
+Terengganu,2020,100.4,2
+Terengganu,2021,103.7,2
+Terengganu,2022,103.8,2
+W.P. Kuala Lumpur,2016,91.93,16
+W.P. Kuala Lumpur,2017,90.37,16
+W.P. Kuala Lumpur,2018,91.18,16
+W.P. Kuala Lumpur,2019,91.6,15
+W.P. Kuala Lumpur,2020,92.4,16
+W.P. Kuala Lumpur,2021,94.5,13
+W.P. Kuala Lumpur,2022,93.8,15
+W.P. Labuan,2016,95.05,15
+W.P. Labuan,2017,91.31,15
+W.P. Labuan,2018,94.54,15
+W.P. Labuan,2019,89.8,16
+W.P. Labuan,2020,94.1,15
+W.P. Labuan,2021,91.4,15
+W.P. Labuan,2022,92.4,16
+W.P. Putrajaya,2016,103.48,1
+W.P. Putrajaya,2017,103.56,1
+W.P. Putrajaya,2018,101.26,1
+W.P. Putrajaya,2019,99.5,6
+W.P. Putrajaya,2020,101.4,1
+W.P. Putrajaya,2021,76.8,16
+W.P. Putrajaya,2022,102.9,3
