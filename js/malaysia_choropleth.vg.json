@@ -5,7 +5,7 @@
     "fontSize": 16,
     "fontWeight": "bold"
   },
-  "width": 800,
+  "width": 900,
   "height": 450,
   "padding": {"left": 50, "top": 20},
   "projection": {"type": "equirectangular"},
@@ -51,6 +51,49 @@
           {"field": "properties.name", "type": "nominal", "title": "State"},
           {"field": "schools", "type": "quantitative", "title": "No. of Schools"}
         ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/malaysia_centroids.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "opacity": 0.6,
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {
+          "field": "schools",
+          "type": "quantitative",
+          "scale": {"range": [50, 3000]},
+          "legend": {"title": "No. of Schools (size)"}
+        },
+        "color": {"value": "#1a3a5c"},
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "schools", "type": "quantitative", "title": "No. of Schools"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/malaysia_centroids.csv"
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 9,
+        "fontWeight": "bold",
+        "dy": -12,
+        "color": "white"
+      },
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "schools", "type": "quantitative"}
       }
     }
   ]

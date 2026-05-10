@@ -5,8 +5,8 @@
     "fontSize": 16,
     "fontWeight": "bold"
   },
-  "width": 600,
-  "height": 500,
+  "width": 500,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/Literacy_Rate_with_id.csv"
   },

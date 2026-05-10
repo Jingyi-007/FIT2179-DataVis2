@@ -1,12 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "School Completion Rate Trend in Malaysia (2016-2022)",
-    "fontSize": 16,
-    "fontWeight": "bold"
-  },
-  "width": 600,
-  "height": 350,
+  "width": 400,
+  "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/completion_trend.csv"
   },
@@ -41,11 +36,18 @@
           "scale": {
             "domain": ["Primary", "Secondary Lower", "Secondary Upper"],
             "range":["#faf0ca", "#c1dbe8", "#6a4a3a"]
-          }
-        },
-        "tooltip": [
-          {"field": "year", "type": "ordinal", "title": "Year"},
-          {"field": "stage", "type": "nominal", "title": "Level"},
+          },
+          "legend": {
+          "orient": "bottom-right",
+          "fillColor": "white",
+          "padding": 8,
+          "cornerRadius": 6,
+          "strokeColor": "#ccc"
+        }
+      },
+      "tooltip": [
+        {"field": "year", "type": "ordinal", "title": "Year"},
+        {"field": "stage", "type": "nominal", "title": "Level"},
           {
             "field": "completion",
             "type": "quantitative",

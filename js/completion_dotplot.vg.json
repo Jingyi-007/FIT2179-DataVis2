@@ -1,10 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "School Completion Rates by State and Level (2022)",
-    "fontSize": 16,
-    "fontWeight": "bold"
-  },
   "width": 300,
   "height": 350,
   "data": {

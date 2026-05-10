@@ -4,7 +4,7 @@ vegaEmbed("#choropleth_map", choroplethMap)
   .then(function(result) {})
   .catch(console.error);
 
-// Section 2 - Bar Chart
+// Section 2 - Top 10 VS Top 10 Bar Chart
 var barChart = "js/bar_chart.vg.json";
 vegaEmbed("#bar_chart", barChart)
   .then(function(result) {})
@@ -16,7 +16,7 @@ vegaEmbed("#malaysia_map", malaysiaMap)
   .then(function(result) {})
   .catch(console.error);
 
-// Section 4 - Heatmap
+// Section 4 - Heatmap 
 var heatmap = "js/heatmap.vg.json";
 vegaEmbed("#heatmap", heatmap)
   .then(function(result) {})
@@ -55,5 +55,11 @@ vegaEmbed("#gender_chart", genderChart)
 // Section 10 - Bubble Chart
 var bubbleChart = "js/bubble_chart.vg.json";
 vegaEmbed("#bubble_chart", bubbleChart)
+  .then(function(result) {})
+  .catch(console.error);
+
+// Bump Chart
+var bumpChart = "js/bump_chart.vg.json";
+vegaEmbed("#bump_chart", bumpChart)
   .then(function(result) {})
   .catch(console.error);

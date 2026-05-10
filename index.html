@@ -5,7 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Vega-Lite Libraries -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vega Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
@@ -14,15 +18,8 @@
   <title>Malaysia Literacy & Education</title>
 
   <style>
-    /* ── Google Fonts ── */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap');
-
     /* ── General Reset ── */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Open Sans', sans-serif;
@@ -38,30 +35,14 @@
       text-align: center;
       padding: 40px 20px;
     }
-
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1rem;
-      opacity: 0.85;
-      max-width: 700px;
-      margin: 0 auto;
-    }
+    header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+    header p  { font-size: 1rem; opacity: 0.85; max-width: 700px; margin: 0 auto; }
 
     /* ── Wrapper ── */
-    .wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    .wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* ── Section ── */
-    .section {
-      margin: 40px 0;
-    }
+    .section { margin: 40px 0; }
 
     .section > h2 {
       font-family: 'Poppins', sans-serif;
@@ -71,7 +52,6 @@
       border-left: 4px solid #1a3a5c;
       padding-left: 12px;
     }
-
     .section > p {
       font-size: 0.95rem;
       color: #333;
@@ -79,8 +59,7 @@
       line-height: 1.6;
     }
 
-
-    /* ── Chart Container ── */
+    /* ── Chart Box ── */
     .chart-box {
       background: white;
       border-radius: 10px;
@@ -88,37 +67,31 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       overflow-x: auto;
     }
-
-    .chart-box h2 {
-      font-family: 'Poppins', sans-serif;
+    .chart-box h3 {
+      font-family:'Inter', sans-serif;
       font-size: 1.1rem;
-      color: #1a3a5c;
+      font-weight: 800;
+      color: #433021;
       margin-bottom: 6px;
-      border-left: 4px solid #1a3a5c;
-      padding-left: 12px;
     }
-
     .chart-box p {
       font-size: 0.88rem;
       color: #555;
       margin-bottom: 14px;
       line-height: 1.5;
     }
-
     .chart-inner {
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    /* ── Single Column Layout ── */
+    /* ── Layouts ── */
     .single {
       display: grid;
       grid-template-columns: 1fr;
       gap: 20px;
     }
-
-    /* ── Two Column Layout ── */
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -142,17 +115,16 @@
   <!-- Header -->
   <header>
     <h1>Bridging the Gap: Education Access Across Malaysia</h1>
-    <p>Exploring how access to public education affects literacy outcomes 
-       in Malaysia</p>
+    <p>Exploring how access to public education affects literacy outcomes in Malaysia</p>
   </header>
-  
 
-  <!-- Section 1: Choropleth Map -->
+  <!-- ─────────────────────────────────────────── -->
+  <!-- Section 1: Global Literacy Choropleth       -->
+  <!-- ─────────────────────────────────────────── -->
   <div class="wrapper">
     <div class="section">
-      <h2>Global Literacy Rates</h2>
-      <p>Countries with stronger public education systems tend to achieve 
-         near-universal literacy. Grey countries indicate no available data.</p>
+      <h2> Student Enrolment and Completion Rates</h2>
+      <p>Tracking enrolment trends and completion rates across education levels.</p>
       <div class="single">
         <div class="chart-box">
           <div class="chart-inner">
@@ -162,147 +134,190 @@
       </div>
     </div>
   </div>
-</div>
-     
 
-  <!-- Section 2: Top & Bottom Countries -->
-   <div class="wrapper">
-     <div class="section">
-       <h2>Top 10 vs Bottom 10 Countries</h2>
-       <p>Malaysia is highlighted in gold for comparison against the world's
-          highest and lowest literacy rate countries.</p>
-       <div class="single">
+
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- Section 2: Top & Bottom Countries Bar Chart -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="wrapper">
+    <div class="section">
+      <h2>Top 10 vs Bottom 10 Countries</h2>
+      <p>Malaysia is highlighted in gold for comparison against the world's
+         highest and lowest literacy rate countries.</p>
+      <div class="single">
         <div class="chart-box">
           <div class="chart-inner">
-      <div id="bar_chart"></div>
+            <div id="bar_chart"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Section 3: Malaysia School State Map -->
- <div class="wrapper">
-   <div class="section">
-     <h2>Malaysia's Education Landscape</h2>
-     <p>A closer look at the distribution of primary public schools across Malaysian states.</p>
-     <div class="single">
-       <div class="chart-box">
+  <!-- ─────────────────────────────────────────── -->
+  <!-- Section 3: Malaysia School State Map        -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="wrapper">
+    <div class="section">
+      <h2>Malaysia's Education Landscape</h2>
+      <p>A closer look at the distribution of primary public schools 
+         across Malaysian states.</p>
+      <div class="single">
+        <div class="chart-box">
           <div class="chart-inner">
-    <div id="malaysia_map"></div>
-  </div>
-</div>
-
-<!-- Section 4: Distribution of Schools and Students -->
-<div class="wrapper">
-  <div class="section">
-    <h2>Distribution of Schools and Students</h2>
-  <p>
-    States with more schools generally have higher student enrolment, 
-    though population density also plays a role.
-  </p>
-    <div class="two-col">
-
-      <div class="chart-box">
-         <h3>Public Schools Distribution by State (2022)</h3>
-      <p>Darker colour indicates more schools. Sabah and Sarawak have the most.</p>
-        <div class="chart-inner">
-          <div id="heatmap"></div>
+            <div id="malaysia_map"></div>
+          </div>
         </div>
       </div>
-
-      <div class="chart-box">
-        <h3>Student Enrolment by State (2022)</h3>
-      <p>Selangor has the highest enrolment followed by Johor and Sabah.</p>
-        <div class="chart-inner">
-          <div id="stacked_bar"></div>
-        </div>
-      </div>
-
     </div>
   </div>
-</div>
 
+  <!-- ─────────────────────────────────────────── -->
+  <!-- Section 4: Schools & Enrolment (2 columns)  -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="wrapper">
+    <div class="section">
+      <h2>Distribution of Schools and Students</h2>
+      <p>States with more schools generally have higher student enrolment,
+         though population density also plays a role.</p>
+      <div class="two-col">
 
-<!-- Section 5: Enrolment Trend -->
- <div class="wrapper">
-   <div class="section">
-    <h2>Student Enrolment and Completion Rates</h2>
-    <p>Section description</p>
-    <div class="two-col">
+        <div class="chart-box">
+          <h3>Public Schools Distribution by State (2022)</h3>
+          <p>Darker colour indicates more schools. Sabah and Sarawak have the most.</p>
+          <div class="chart-inner">
+            <div id="heatmap"></div>
+          </div>
+        </div>
 
-      <div class="chart-box">
-        <h2>Student Enrolment Trend (2017-2022)</h2>
-      <p>Primary school enrolment has steadily increased while secondary 
-          enrolment dipped in 2018 before recovering. Post-secondary enrolment 
-          dropped sharply in 2020 likely due to COVID-19 disruptions.</p>
-        <div class="chart-inner">
+        <div class="chart-box">
+          <h3>Student Enrolment by State (2022)</h3>
+          <p>Selangor has the highest enrolment followed by Johor and Sabah.</p>
+          <div class="chart-inner">
+            <div id="stacked_bar"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- Section 5: Enrolment & Completion (2 cols)  -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="wrapper">
+    <div class="section">
+      <h2>Student Enrolment and Completion Rates</h2>
+      <p>Tracking enrolment trends and completion rates across education levels.</p>
+      <div class="two-col">
+
+        <div class="chart-box">
+          <h3>Student Enrolment Trend (2017-2022)</h3>
+          <p>Primary school enrolment has steadily increased while secondary 
+             enrolment dipped in 2018 before recovering. Post-secondary enrolment 
+             dropped sharply in 2020 likely due to COVID-19 disruptions.</p>
+          <div class="chart-inner">
             <div id="line_chart"></div>
           </div>
         </div>
 
         <div class="chart-box">
-          <h2>School Completion Rates by State (2022)</h2>
-        <p>Most Malaysian states achieve near or above 100% completion rates. 
-          W.P. Kuala Lumpur and W.P. Labuan show relatively lower primary 
-          completion rates. Rates above 100% occur due to cross-district 
-          enrolment patterns.</p>
+          <h3>School Completion Rates by State (2022)</h3>
+          <p>Most Malaysian states achieve near or above 100% completion rates. 
+             W.P. Kuala Lumpur and W.P. Labuan show relatively lower primary 
+             completion rates. Rates above 100% occur due to cross-district 
+             enrolment patterns.</p>
           <div class="chart-inner">
-              <div id="completion_dot_plot"></div>
-            </div>
+            <div id="completion_dot_plot"></div>
           </div>
+        </div>
 
       </div>
+    </div>
   </div>
-</div>
 
-<!-- Section 6: Completion Trend -->
-<div class="wrapper">
-  <div class="section">
-    <h2>School Completion Rate Trend (2016-2022)</h2>
-    <p>Overall completion rates have been improving across all levels. 
-       A notable dip in Secondary Upper completion rate in 2020 reflects 
-       the disruption caused by COVID-19 school closures.</p>
-    <div class="single">
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <!-- Section 6: Completion Trend Line Chart & Gender Gaps (2 cols)        -->
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <div class="wrapper">
+    <div class="section">
+      <h2>School Completion Rate Trend (2016-2022)</h2>
+      <p>Overall completion rates have been improving across all levels. 
+         A notable dip in Secondary Upper completion rate in 2020 reflects 
+         the disruption caused by COVID-19 school closures.</p>
+      <div class="two-col">
+
+          <div class="chart-box">
+            <h3>School Completion Rate Trend (2016-2022)</h3>
+            <p>Overall completion rates have been improving across all levels. 
+              A notable dip in Secondary Upper completion rate in 2020 reflects 
+              the disruption caused by COVID-19 school closures.</p>
+            <div class="chart-inner">
+              <div id="completion_trend"></div>
+            </div>
+          </div>
+  
+          <div class="chart-box">
+            <h3>Gender Gap in Primary School Completion (2022)</h3>
+            <p>👧 Girls consistently outperform 👦 boys in primary school 
+            completion rates across all Malaysian states. The gap is most 
+            notable in W.P. Labuan and Pahang.</p>
+            <div class="chart-inner">
+              <div id="gender_chart"></div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- ─────────────────────────────────────────── -->
+  <!-- Section 8: Bubble Chart                     -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="wrapper">
+    <div class="section">
+      <h2>School Access vs Completion Rate (2022)</h2>
+      <p>Each bubble represents a Malaysian state. Bubble size indicates 
+         total student enrolment. States with more schools generally 
+         maintain high completion rates. W.P. Kuala Lumpur and W.P. Labuan 
+         are notable outliers with lower completion despite urban location.</p>
+      <div class="single">
         <div class="chart-box">
           <div class="chart-inner">
-            <div id="completion_trend"></div>
+            <div id="bubble_chart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- Section 7: Gender Gap -->
-<div class="wrapper">
-  <div class="section">
-    <h2>Gender Gap in Primary School Completion (2022)</h2>
-    <p>👧 Girls consistently outperform 👦 boys in primary school 
-       completion rates across all Malaysian states. The gap is most 
-       notable in W.P. Labuan and Pahang.</p>
-    <div class="single">
-      <div class="chart-box">
-        <div class="chart-inner">
-    <div id="gender_chart"></div>
+  <!-- ─────────────────────────────────────────── -->
+  <!-- Section 9: Bump Chart                       -->
+  <!-- ─────────────────────────────────────────── -->
+  <div class="wrapper">
+    <div class="section">
+      <h2>State Completion Rate Rankings (2016-2022)</h2>
+      <p>Tracks how each state's primary completion rate ranking 
+         changed over time. W.P. Putrajaya dropped dramatically 
+         in 2021 before recovering in 2022.</p>
+      <div class="single">
+        <div class="chart-box">
+          <div class="chart-inner">
+            <div id="bump_chart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- Section 8: Bubble Chart -->
-<div class="wrapper">
-  <div class="section">
-    <h2>School Access vs Completion Rate (2022)</h2>
-    <p>Each bubble represents a Malaysian state. Bubble size indicates 
-       total student enrolment. States with more schools generally 
-       maintain high completion rates. W.P. Kuala Lumpur and W.P. Labuan 
-     are notable outliers with lower completion despite urban location.</p>
-  <div class="single">
-      <div class="chart-box">
-        <div class="chart-inner">
-    <div id="bubble_chart"></div>
-  </div>
-</div>
-
-
-<!-- Footer -->
-<footer>
-  <p>FIT2179 Data Visualisation | Data source: Kaggle & OpenDOSM</p>
-  <p>By Loh Jing Yi | May 2026 </p>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>FIT2179 Data Visualisation | Data source: Kaggle & OpenDOSM</p>
+    <p>By Loh Jing Yi | May 2026</p>
+  </footer>
 
 </body>
 </html>
+
