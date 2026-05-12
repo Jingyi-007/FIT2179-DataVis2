@@ -139,7 +139,10 @@
   ],
   "mark": {
     "type": "text",
+    "align": "center",
+    "baseline": "middle",
     "dx": 12,
+    "dy": 16,
     "fontSize": 10,
     "fontWeight": "bold",
     "color": "#e8405a"
