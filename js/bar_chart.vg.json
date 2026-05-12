@@ -1,11 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Top 10 and Bottom 10 Countries by Literacy Rate (with Malaysia)",
-    "fontSize": 16,
-    "fontWeight": "bold"
-  },
-  "width": 500,
+  "width": 400,
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/Literacy_Rate_with_id.csv"
@@ -49,7 +44,7 @@
       "type": "nominal",
       "scale": {
         "domain": ["Top 10", "Malaysia", "Bottom 10"],
-        "range": ["#c8d9e6", "#2f4156", "#f5efeb"]
+        "range": ["#c8d9e6", "#2f4156", "#c8d9e6"]
       },
       "legend": {"title": "Group"}
     },

@@ -8,31 +8,29 @@
   "params": [
     {
       "name": "state_highlight",
-      "value": "Selangor",
+      "value": null,
       "bind": {
         "input": "select",
         "options": [
-          "Johor",
-          "Kedah",
-          "Kelantan",
-          "Melaka",
-          "Negeri Sembilan",
-          "Pahang",
-          "Perak",
-          "Perlis",
-          "Pulau Pinang",
-          "Sabah",
-          "Sarawak",
-          "Selangor",
-          "Terengganu",
-          "W.P. Kuala Lumpur",
-          "W.P. Labuan",
-          "W.P. Putrajaya"
+          null,
+          "Johor", "Kedah", "Kelantan", "Melaka",
+          "Negeri Sembilan", "Pahang", "Perak", "Perlis",
+          "Pulau Pinang", "Sabah", "Sarawak", "Selangor",
+          "Terengganu", "W.P. Kuala Lumpur",
+          "W.P. Labuan", "W.P. Putrajaya"
+        ],
+        "labels": [
+          "Show All",
+          "Johor", "Kedah", "Kelantan", "Melaka",
+          "Negeri Sembilan", "Pahang", "Perak", "Perlis",
+          "Pulau Pinang", "Sabah", "Sarawak", "Selangor",
+          "Terengganu", "W.P. Kuala Lumpur",
+          "W.P. Labuan", "W.P. Putrajaya"
         ],
         "name": "Select State: "
       }
     }
-  ],
+],
   "transform": [
     {
       "calculate": "toNumber(datum.year)",
@@ -97,14 +95,14 @@
         },
         "opacity": {
           "condition": {
-            "test": "datum.state == state_highlight",
+            "test": "state_highlight == null ||datum.state == state_highlight",
             "value": 1
           },
           "value": 0.1
         },
         "strokeWidth": {
           "condition": {
-            "test": "datum.state == state_highlight",
+            "test": "state_highlight == null || datum.state == state_highlight",
             "value": 4
           },
           "value": 1
@@ -142,7 +140,7 @@
         },
         "opacity": {
           "condition": {
-            "test": "datum.state == state_highlight",
+            "test": "state_highlight == null || datum.state == state_highlight",
             "value": 1
           },
           "value": 0.1
@@ -210,7 +208,7 @@
         },
         "opacity": {
           "condition": {
-            "test": "datum.state == state_highlight",
+            "test": "state_highlight == null || datum.state == state_highlight",
             "value": 1
           },
           "value": 0.1
@@ -259,7 +257,7 @@
         },
         "opacity": {
           "condition": {
-            "test": "datum.state == state_highlight",
+            "test": "state_highlight == null || datum.state == state_highlight",
             "value": 1
           },
           "value": 0.1
