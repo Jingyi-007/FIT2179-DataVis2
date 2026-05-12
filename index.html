@@ -21,6 +21,31 @@
     /* ── General Reset ── */
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    @font-face {
+      font-family: 'Paquito';
+      src: url('fonts/Paquito-Variable.ttf') format('truetype');
+    }
+
+    @font-face {
+    font-family: 'GeneralSans';
+    src: url('fonts/GeneralSans-Semibold.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Melodrama';
+    src: url('fonts/Melodrama-Bold.otf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'FiraSans';
+    src: url('fonts/FiraSans-SemiBold.otf') format('truetype');
+  }
+
+    @font-face {
+      font-family: 'Chillax';
+      src: url('fonts/Chillax-Semibold.otf') format('truetype');
+    }
+
     body {
       font-family: 'Open Sans', sans-serif;
       background-color: #f4f6f9;
@@ -29,7 +54,7 @@
 
     /* ── Header ── */
     header {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Chillax', sans-serif;
       background-color: #1a3a5c;
       color: #d3dff2;
       text-align: center;
@@ -114,7 +139,7 @@
 
   <!-- Header -->
   <header>
-    <h1>Bridging the Gap: Education Access Across Malaysia</h1>
+    <h1>BRIDGING THE GAP : EDUCATION ACCESS ACROSS MALAYSIA</h1>
     <p>Exploring how access to public education affects literacy outcomes in Malaysia</p>
   </header>
 
@@ -145,12 +170,25 @@
       <h2>Top 10 vs Bottom 10 Countries</h2>
       <p>Malaysia is highlighted in gold for comparison against the world's
          highest and lowest literacy rate countries.</p>
-      <div class="single">
+      <div class="two-col">
+
         <div class="chart-box">
+          <h3>Public Schools Distribution by State (2022)</h3>
+          <p>Darker colour indicates more schools. Sabah and Sarawak have the most.</p>
           <div class="chart-inner">
             <div id="bar_chart"></div>
           </div>
         </div>
+
+        <div class="chart-box">
+          <h3>Schools by Education Level (2022)</h3>
+          <p>Primary schools make up 76% of all public schools in Malaysia,
+            with secondary at 24% and tertiary at less than 1%.</p>
+          <div class="chart-inner">
+            <div id="donut_chart"></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

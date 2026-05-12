@@ -10,6 +10,36 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/bubble_chart.csv"
   },
+  "params": [
+    {
+      "name": "region_selection",
+      "bind": {
+        "input": "select",
+        "options": [null, "West Malaysia", "East Malaysia"],
+        "labels": ["Show All", "West Malaysia", "East Malaysia"],
+        "name": "Region Selection: "
+      }
+    },
+    {
+      "name": "schools_above",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 1300,
+        "step": 50,
+        "name": "Minimum No. of Schools: "
+      }
+    }
+  ],
+  "transform": [
+    {
+      "filter": "region_selection == null || datum.region == region_selection"
+    },
+    {
+      "filter": "datum.total_schools > schools_above"
+    }
+  ],
   "layer": [
     {
       "mark": {

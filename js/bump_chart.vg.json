@@ -5,32 +5,89 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/bump_chart.csv"
   },
+  "params": [
+    {
+      "name": "state_highlight",
+      "value": "Selangor",
+      "bind": {
+        "input": "select",
+        "options": [
+          "Johor",
+          "Kedah",
+          "Kelantan",
+          "Melaka",
+          "Negeri Sembilan",
+          "Pahang",
+          "Perak",
+          "Perlis",
+          "Pulau Pinang",
+          "Sabah",
+          "Sarawak",
+          "Selangor",
+          "Terengganu",
+          "W.P. Kuala Lumpur",
+          "W.P. Labuan",
+          "W.P. Putrajaya"
+        ],
+        "name": "Select State: "
+      }
+    }
+  ],
   "transform": [
-    {"calculate": "toNumber(datum.year)", "as": "year"},
-    {"calculate": "toNumber(datum.rank)", "as": "rank"}
+    {
+      "calculate": "toNumber(datum.year)",
+      "as": "year"
+    },
+    {
+      "calculate": "toNumber(datum.rank)",
+      "as": "rank"
+    }
   ],
   "layer": [
     {
       "mark": {
         "type": "line",
-        "strokeWidth": 2,
-        "opacity": 0.6
+        "strokeWidth": 2
       },
       "encoding": {
         "x": {
           "field": "year",
           "type": "ordinal",
           "title": "Year",
-          "axis": {"labelAngle": 0}
+          "axis": {
+            "labelAngle": 0
+          }
         },
         "y": {
           "field": "rank",
           "type": "quantitative",
           "title": "Rank (1 = Highest Completion)",
-          "scale": {"domain": [16.5, 0.5]},
+          "scale": {
+            "domain": [
+              16.5,
+              0.5
+            ]
+          },
           "axis": {
             "tickMinStep": 1,
-            "values": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+            "values": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ]
           }
         },
         "color": {
@@ -38,15 +95,30 @@
           "type": "nominal",
           "legend": null
         },
-        "detail": {"field": "state"}
+        "opacity": {
+          "condition": {
+            "test": "datum.state == state_highlight",
+            "value": 1
+          },
+          "value": 0.1
+        },
+        "strokeWidth": {
+          "condition": {
+            "test": "datum.state == state_highlight",
+            "value": 4
+          },
+          "value": 1
+        },
+        "detail": {
+          "field": "state"
+        }
       }
     },
     {
       "mark": {
         "type": "point",
         "filled": true,
-        "size": 80,
-        "opacity": 0.9
+        "size": 80
       },
       "encoding": {
         "x": {
@@ -56,17 +128,41 @@
         "y": {
           "field": "rank",
           "type": "quantitative",
-          "scale": {"domain": [16.5, 0.5]}
+          "scale": {
+            "domain": [
+              16.5,
+              0.5
+            ]
+          }
         },
         "color": {
           "field": "state",
           "type": "nominal",
           "legend": null
         },
+        "opacity": {
+          "condition": {
+            "test": "datum.state == state_highlight",
+            "value": 1
+          },
+          "value": 0.1
+        },
         "tooltip": [
-          {"field": "state", "type": "nominal", "title": "State"},
-          {"field": "year", "type": "ordinal", "title": "Year"},
-          {"field": "rank", "type": "quantitative", "title": "Rank"},
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "year",
+            "type": "ordinal",
+            "title": "Year"
+          },
+          {
+            "field": "rank",
+            "type": "quantitative",
+            "title": "Rank"
+          },
           {
             "field": "completion",
             "type": "quantitative",
@@ -84,20 +180,40 @@
         "fontSize": 10
       },
       "transform": [
-        {"filter": "datum.year == 2022"}
+        {
+          "filter": "datum.year == 2022"
+        }
       ],
       "encoding": {
-        "x": {"field": "year", "type": "ordinal"},
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
         "y": {
           "field": "rank",
           "type": "quantitative",
-          "scale": {"domain": [16.5, 0.5]}
+          "scale": {
+            "domain": [
+              16.5,
+              0.5
+            ]
+          }
         },
-        "text": {"field": "state", "type": "nominal"},
+        "text": {
+          "field": "state",
+          "type": "nominal"
+        },
         "color": {
           "field": "state",
           "type": "nominal",
           "legend": null
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum.state == state_highlight",
+            "value": 1
+          },
+          "value": 0.1
         }
       }
     },
@@ -109,30 +225,55 @@
         "fontSize": 10
       },
       "transform": [
-        {"filter": "datum.year == 2016"},
         {
-        "calculate": "datum.state == 'Pulau Pinang' ? datum.rank - 0.4 : datum.state == 'W.P. Kuala Lumpur' ? datum.rank + 0.4 : datum.state == 'Negeri Sembilan' ? datum.rank + 0.4 : datum.state == 'W.P. Labuan' ? datum.rank - 0.4 : datum.rank",
-        "as": "rank_adjusted"
+          "filter": "datum.year == 2016"
+        },
+        {
+          "calculate": "datum.state == 'Pulau Pinang' ? datum.rank - 0.4 : datum.state == 'W.P. Kuala Lumpur' ? datum.rank + 0.4 : datum.state == 'Negeri Sembilan' ? datum.rank + 0.4 : datum.state == 'W.P. Labuan' ? datum.rank - 0.4 : datum.rank",
+          "as": "rank_adjusted"
         }
       ],
       "encoding": {
-        "x": {"field": "year", "type": "ordinal"},
+        "x": {
+          "field": "year",
+          "type": "ordinal"
+        },
         "y": {
           "field": "rank_adjusted",
           "type": "quantitative",
-          "scale": {"domain": [16.5, 0.5]}
+          "scale": {
+            "domain": [
+              16.5,
+              0.5
+            ]
+          }
         },
-        "text": {"field": "state", "type": "nominal"},
+        "text": {
+          "field": "state",
+          "type": "nominal"
+        },
         "color": {
           "field": "state",
           "type": "nominal",
           "legend": null
+        },
+        "opacity": {
+          "condition": {
+            "test": "datum.state == state_highlight",
+            "value": 1
+          },
+          "value": 0.1
         }
       }
     }
   ],
   "config": {
-    "view": {"stroke": null},
-    "axis": {"grid": true, "gridColor": "#f0f0f0"}
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": true,
+      "gridColor": "#f0f0f0"
+    }
   }
 }

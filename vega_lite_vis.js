@@ -63,3 +63,9 @@ var bumpChart = "js/bump_chart.vg.json";
 vegaEmbed("#bump_chart", bumpChart)
   .then(function(result) {})
   .catch(console.error);
+
+// Donut Chart
+var donutChart = "js/donut_chart.vg.json";
+vegaEmbed("#donut_chart", donutChart)
+  .then(function(result) {})
+  .catch(console.error);
