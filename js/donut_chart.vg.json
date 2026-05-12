@@ -26,7 +26,7 @@
           "title": "Education Level",
           "scale": {
             "domain": ["Primary", "Secondary", "Tertiary"],
-            "range": ["#1a3a5c", "#e05c2a", "#2ecc71"]
+            "range": ["#faf0ca", "#c1dbe8", "#6a4a3a"]
           },
           "legend": {
             "title": "Education Level",
@@ -47,7 +47,7 @@
         "radius": 120,
         "fontSize": 13,
         "fontWeight": "bold",
-        "color": "white"
+        "color": "black"
       },
       "encoding": {
         "theta": {
@@ -80,7 +80,7 @@
         "type": "text",
         "radius": 0,
         "fontSize": 11,
-        "color": "#888",
+        "color": "#6a4a3a",
         "dy": 10
       },
       "encoding": {
