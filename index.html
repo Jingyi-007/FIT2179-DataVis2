@@ -17,122 +17,7 @@
 
   <title>Malaysia Literacy & Education</title>
 
-  <style>
-    /* ── General Reset ── */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    @font-face {
-      font-family: 'Paquito';
-      src: url('fonts/Paquito-Variable.ttf') format('truetype');
-    }
-
-    @font-face {
-    font-family: 'GeneralSans';
-    src: url('fonts/GeneralSans-Semibold.otf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Melodrama';
-    src: url('fonts/Melodrama-Bold.otf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'FiraSans';
-    src: url('fonts/FiraSans-SemiBold.otf') format('truetype');
-  }
-
-    @font-face {
-      font-family: 'Chillax';
-      src: url('fonts/Chillax-Semibold.otf') format('truetype');
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f4f6f9;
-      color: #333;
-    }
-
-    /* ── Header ── */
-    header {
-      font-family: 'Chillax', sans-serif;
-      background-color: #1a3a5c;
-      color: #d3dff2;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    header h1 { font-size: 2.2rem; margin-bottom: 10px; }
-    header p  { font-size: 1rem; opacity: 0.85; max-width: 700px; margin: 0 auto; }
-
-    /* ── Wrapper ── */
-    .wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-    /* ── Section ── */
-    .section { margin: 40px 0; }
-
-    .section > h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.5rem;
-      color: #1a3a5c;
-      margin-bottom: 8px;
-      border-left: 4px solid #1a3a5c;
-      padding-left: 12px;
-    }
-    .section > p {
-      font-size: 0.95rem;
-      color: #333;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    /* ── Chart Box ── */
-    .chart-box {
-      background: white;
-      border-radius: 10px;
-      padding: 24px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      overflow-x: auto;
-    }
-    .chart-box h3 {
-      font-family:'Inter', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 800;
-      color: #433021;
-      margin-bottom: 6px;
-    }
-    .chart-box p {
-      font-size: 0.88rem;
-      color: #555;
-      margin-bottom: 14px;
-      line-height: 1.5;
-    }
-    .chart-inner {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    /* ── Layouts ── */
-    .single {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-    }
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-
-    /* ── Footer ── */
-    footer {
-      text-align: center;
-      padding: 24px;
-      font-size: 0.85rem;
-      color: #999;
-      margin-top: 60px;
-      border-top: 1px solid #ddd;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -160,21 +45,20 @@
     </div>
   </div>
 
-
-
   <!-- ─────────────────────────────────────────── -->
   <!-- Section 2: Top & Bottom Countries Bar Chart -->
   <!-- ─────────────────────────────────────────── -->
   <div class="wrapper">
     <div class="section">
-      <h2>Top 10 vs Bottom 10 Countries</h2>
-      <p>Malaysia is highlighted in gold for comparison against the world's
-         highest and lowest literacy rate countries.</p>
+      <h2>Literacy Rates & School Composition in Malaysia</h2>
+      <p>Malaysia maintains high literacy rates supported by a 
+        public education system that is heavily focused on primary-level access across the country.</p>
       <div class="two-col">
 
         <div class="chart-box">
-          <h3>Public Schools Distribution by State (2022)</h3>
-          <p>Darker colour indicates more schools. Sabah and Sarawak have the most.</p>
+          <h3>Top 10 vs Bottom 10 Countries by Literacy Rate</h3>
+          <p>Malaysia achieves near-universal literacy, placing it much closer to the 
+            world’s highest-performing countries than the lowest-performing nations.</p>
           <div class="chart-inner">
             <div id="bar_chart"></div>
           </div>
@@ -317,10 +201,10 @@
   <div class="wrapper">
     <div class="section">
       <h2>School Access vs Completion Rate (2022)</h2>
-      <p>Each bubble represents a Malaysian state. Bubble size indicates 
-         total student enrolment. States with more schools generally 
-         maintain high completion rates. W.P. Kuala Lumpur and W.P. Labuan 
-         are notable outliers with lower completion despite urban location.</p>
+      <p>
+      States with more schools generally achieve higher completion rates.<br>
+      W.P. Kuala Lumpur and Labuan remain notable urban outliers.
+      </p>
       <div class="single">
         <div class="chart-box">
           <div class="chart-inner">
