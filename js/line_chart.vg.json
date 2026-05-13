@@ -75,6 +75,52 @@
           }
         }
       }
+    },
+  {
+  "transform": [
+    {
+      "filter": "datum.year == 2020 && datum.stage == 'Post Secondary'"
     }
+  ],
+  "mark": {
+    "type": "text",
+    "align": "left",
+    "dx": -80,
+    "dy": -30,
+    "fontSize": 10,
+    "fontWeight": "bold",
+    "color": "#e8405a"
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal"
+    },
+    "y": {
+      "field": "students",
+      "type": "quantitative"
+    },
+    "text": {
+      "value": "Dropped due to COVID-19 disruption"
+    }
+  }
+},
+{
+  "transform": [
+    {
+      "filter": "datum.year == 2020 && datum.stage == 'Post Secondary'"
+    }
+  ],
+  "mark": {
+    "type": "rule",
+    "color": "#e8405a",
+    "strokeWidth": 1
+  },
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal"},
+    "y": {"field": "students", "type": "quantitative"},
+    "y2": {"datum": 200000}
+  }
+}
   ]
 }

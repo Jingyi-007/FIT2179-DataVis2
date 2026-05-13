@@ -29,9 +29,16 @@
             "range": ["#faf0ca", "#c1dbe8", "#6a4a3a"]
           },
           "legend": {
-            "title": "Education Level",
-            "orient": "bottom"
-          }
+          "title": "Education Level",
+          "orient": "bottom",
+          "labelExpr": "datum.label == 'Primary' ? 'Primary (75.9%)' : datum.label == 'Secondary' ? 'Secondary (23.9%)' : 'Tertiary (0.2%)'",
+          "labelFontSize": 13, 
+          "titleFontSize": 14, 
+          "titleColor": "#1a3a5c",  
+          "symbolSize": 120,
+          "rowPadding": 8 ,
+          "titleFontWeight": "bold"
+        }
         },
         "tooltip": [
           {"field": "stage", "type": "nominal", "title": "Level"},
@@ -39,27 +46,6 @@
           {"field": "percentage", "type": "quantitative",
            "title": "Percentage (%)", "format": ".1f"}
         ]
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "radius": 120,
-        "fontSize": 13,
-        "fontWeight": "bold",
-        "color": "black"
-      },
-      "encoding": {
-        "theta": {
-          "field": "schools",
-          "type": "quantitative",
-          "stack": true
-        },
-        "text": {
-          "field": "percentage",
-          "type": "quantitative",
-          "format": ".1f"
-        }
       }
     },
     {
