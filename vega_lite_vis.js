@@ -69,3 +69,8 @@ var donutChart = "js/donut_chart.vg.json";
 vegaEmbed("#donut_chart", donutChart)
   .then(function(result) {})
   .catch(console.error);
+
+var smallMultiples = "js/small_multiples.vg.json";
+vegaEmbed("#small_multiples", smallMultiples)
+  .then(function(result) {})
+  .catch(console.error);

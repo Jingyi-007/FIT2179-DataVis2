@@ -1,0 +1,109 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Primary Public Schools by State (2017-2022)",
+  "repeat": ["2017", "2018", "2019", "2020", "2021", "2022"],
+  "columns": 3,
+  "spec": {
+    "projection": {
+      "type": "equirectangular"
+    },
+    "width": 250,
+    "height": 150,
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/js/malaysia_state.json",
+          "format": {"type": "topojson", "feature": "malaysia.state"}
+        },
+        "transform": [
+          {
+            "calculate": "'No data: ' + datum.properties.name",
+            "as": "note"
+          }
+        ],
+        "mark": {
+          "type": "geoshape",
+          "fill": "#ddd",
+          "stroke": "white",
+          "strokeWidth": 0.5
+        },
+        "encoding": {"tooltip": {"field": "note"}}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_wide_format.csv"
+        },
+        "transform": [
+          {
+            "lookup": "state",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/js/malaysia_state.json",
+                "format": {
+                  "type": "topojson",
+                  "feature": "malaysia.state"
+                }
+              },
+              "key": "properties.name"
+            },
+            "as": "geo"
+          }
+        ],
+        "mark": {
+          "type": "geoshape",
+          "stroke": "white",
+          "strokeWidth": 0.5
+        },
+        "encoding": {
+          "shape": {"field": "geo", "type": "geojson"},
+          "color": {
+            "field": {"repeat": "repeat"},
+            "type": "quantitative",
+            "scale": {
+              "domain": [0, 1300],
+              "scheme": "blues"
+            },
+            "legend": {
+              "title": "No. of Schools"
+            }
+          },
+          "tooltip": [
+            {"field": "state", "type": "nominal", "title": "State"},
+            {
+              "field": {"repeat": "repeat"},
+              "type": "quantitative",
+              "title": "No. of Schools"
+            }
+          ]
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "2017": "2017", "2018": "2018",
+              "2019": "2019", "2020": "2020",
+              "2021": "2021", "2022": "2022"
+            }
+          ]
+        },
+        "mark": {
+          "type": "text",
+          "align": "left",
+          "baseline": "top",
+          "x": 5,
+          "y": 5,
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "color": "#1a3a5c"
+        },
+        "encoding": {
+          "text": {"field": {"repeat": "repeat"}}
+        }
+      }
+    ]
+  },
+  "config": {
+    "view": {"stroke": null}
+  }
+}
