@@ -1,52 +1,59 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Primary Public Schools by State (2017-2022)",
-  "repeat": ["2017", "2018", "2019", "2020", "2021", "2022"],
+  "repeat": [
+    "2017",
+    "2018",
+    "2019",
+    "2020",
+    "2021",
+    "2022"
+  ],
   "columns": 3,
   "spec": {
-    "projection": {
-      "type": "equirectangular"
-    },
     "width": 250,
     "height": 150,
     "layer": [
       {
         "data": {
           "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/js/malaysia_state.json",
-          "format": {"type": "topojson", "feature": "malaysia.state"}
-        },
-        "transform": [
-          {
-            "calculate": "'No data: ' + datum.properties.name",
-            "as": "note"
+          "format": {
+            "type": "topojson",
+            "feature": "malaysia.state"
           }
-        ],
+        },
         "mark": {
           "type": "geoshape",
           "fill": "#ddd",
           "stroke": "white",
           "strokeWidth": 0.5
-        },
-        "encoding": {"tooltip": {"field": "note"}}
+        }
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_wide_format.csv"
+          "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/js/malaysia_state.json",
+          "format": {
+            "type": "topojson",
+            "feature": "malaysia.state"
+          }
         },
         "transform": [
           {
-            "lookup": "state",
+            "lookup": "properties.name",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/js/malaysia_state.json",
-                "format": {
-                  "type": "topojson",
-                  "feature": "malaysia.state"
-                }
+                "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_wide_format.csv"
               },
-              "key": "properties.name"
-            },
-            "as": "geo"
+              "key": "state",
+              "fields": [
+                "2017",
+                "2018",
+                "2019",
+                "2020",
+                "2021",
+                "2022"
+              ]
+            }
           }
         ],
         "mark": {
@@ -55,12 +62,16 @@
           "strokeWidth": 0.5
         },
         "encoding": {
-          "shape": {"field": "geo", "type": "geojson"},
           "color": {
-            "field": {"repeat": "repeat"},
+            "field": {
+              "repeat": "repeat"
+            },
             "type": "quantitative",
             "scale": {
-              "domain": [0, 1300],
+              "domain": [
+                0,
+                1300
+              ],
               "scheme": "blues"
             },
             "legend": {
@@ -68,9 +79,15 @@
             }
           },
           "tooltip": [
-            {"field": "state", "type": "nominal", "title": "State"},
             {
-              "field": {"repeat": "repeat"},
+              "field": "properties.name",
+              "type": "nominal",
+              "title": "State"
+            },
+            {
+              "field": {
+                "repeat": "repeat"
+              },
               "type": "quantitative",
               "title": "No. of Schools"
             }
@@ -81,9 +98,12 @@
         "data": {
           "values": [
             {
-              "2017": "2017", "2018": "2018",
-              "2019": "2019", "2020": "2020",
-              "2021": "2021", "2022": "2022"
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022"
             }
           ]
         },
@@ -98,12 +118,18 @@
           "color": "#1a3a5c"
         },
         "encoding": {
-          "text": {"field": {"repeat": "repeat"}}
+          "text": {
+            "field": {
+              "repeat": "repeat"
+            }
+          }
         }
       }
     ]
   },
   "config": {
-    "view": {"stroke": null}
+    "view": {
+      "stroke": null
+    }
   }
 }
