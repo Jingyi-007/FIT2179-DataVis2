@@ -75,7 +75,25 @@
           }
         ]
       }
-    }
+    },
+        {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": -90,
+        "dy": -20,
+        "fontSize": 10,
+        "color": "#fabbc9"
+      },
+      "encoding": {
+        "x": {"datum": 100},
+        "y": {"datum": 0},
+        "text": {
+          "value": "Above 100% reflects cross-district enrolment"
+            }
+          }
+        }
+
   ],
   "config": {
     "view": {"stroke": null},
