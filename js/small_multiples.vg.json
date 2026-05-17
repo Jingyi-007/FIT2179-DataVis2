@@ -1,6 +1,5 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Primary Public Schools by State (2017-2022)",
   "repeat": [
     "2017",
     "2018",
@@ -10,9 +9,10 @@
     "2022"
   ],
   "columns": 3,
+  "spacing": 20,  
   "spec": {
-    "width": 250,
-    "height": 150,
+    "width": 320,
+    "height": 270,
     "layer": [
       {
         "data": {
@@ -42,17 +42,10 @@
             "lookup": "properties.name",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_wide_format.csv"
+                "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_normalised_wide.csv"
               },
               "key": "state",
-              "fields": [
-                "2017",
-                "2018",
-                "2019",
-                "2020",
-                "2021",
-                "2022"
-              ]
+              "fields": ["2017", "2018", "2019", "2020", "2021", "2022"]
             }
           }
         ],
@@ -68,14 +61,11 @@
             },
             "type": "quantitative",
             "scale": {
-              "domain": [
-                0,
-                1300
-              ],
+              "domain": [0.5, 3.5],
               "scheme": "blues"
             },
             "legend": {
-              "title": "No. of Schools"
+              "title": "Schools per 1,000 Students"
             }
           },
           "tooltip": [
