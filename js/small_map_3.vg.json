@@ -1,0 +1,62 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "repeat": ["2021", "2022"],
+  "columns": 1,
+  "spacing": 10,
+  "spec": {
+    "width": 200,
+    "height": 200,
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/js/malaysia_state.json",
+          "format": {"type": "topojson", "feature": "malaysia.state"}
+        },
+        "mark": {"type": "geoshape", "fill": "#ddd", "stroke": "white", "strokeWidth": 0.5}
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/js/malaysia_state.json",
+          "format": {"type": "topojson", "feature": "malaysia.state"}
+        },
+        "transform": [
+          {
+            "lookup": "properties.name",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_normalised_wide.csv"
+              },
+              "key": "state",
+              "fields": ["2017", "2018", "2019", "2020", "2021", "2022"]
+            }
+          }
+        ],
+        "mark": {"type": "geoshape", "stroke": "white", "strokeWidth": 0.5},
+        "encoding": {
+          "color": {
+            "field": {"repeat": "repeat"},
+            "type": "quantitative",
+            "scale": {"domain": [0.5, 3.5], "scheme": "blues"},
+            "legend": null
+          },
+          "tooltip": [
+            {"field": "properties.name", "type": "nominal", "title": "State"},
+            {"field": {"repeat": "repeat"}, "type": "quantitative",
+             "title": "Schools per 1,000 Students", "format": ".2f"}
+          ]
+        }
+      },
+      {
+        "data": {
+          "values": [{"2021": "2021", "2022": "2022"}]
+        },
+        "mark": {
+          "type": "text", "align": "left", "baseline": "top",
+          "x": 5, "y": 5, "fontSize": 13, "fontWeight": "bold", "color": "#1a3a5c"
+        },
+        "encoding": {"text": {"field": {"repeat": "repeat"}}}
+      }
+    ]
+  },
+  "config": {"view": {"stroke": null}}
+}

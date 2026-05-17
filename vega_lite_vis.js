@@ -74,3 +74,12 @@ var smallMultiples = "js/small_multiples.vg.json";
 vegaEmbed("#small_multiples", smallMultiples)
   .then(function(result) {})
   .catch(console.error);
+
+// Small Multiple Maps
+var smallMap1 = "js/small_map_1.vg.json";
+var smallMap2 = "js/small_map_2.vg.json";
+var smallMap3 = "js/small_map_3.vg.json";
+
+vegaEmbed("#small_map_1", smallMap1).then(function(result) {}).catch(console.error);
+vegaEmbed("#small_map_2", smallMap2).then(function(result) {}).catch(console.error);
+vegaEmbed("#small_map_3", smallMap3).then(function(result) {}).catch(console.error);
