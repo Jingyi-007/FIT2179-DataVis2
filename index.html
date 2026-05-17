@@ -51,8 +51,7 @@
   <div class="wrapper">
     <div class="section">
       <h2>Literacy Rates & School Composition in Malaysia</h2>
-      <p>Malaysia maintains high literacy rates supported by a 
-        public education system that is heavily focused on primary-level access across the country.</p>
+      <p>High literacy rates supported by widespread primary education access.</p>
       <div class="two-col">
 
         <div class="chart-box">
@@ -80,20 +79,79 @@
   <!-- ─────────────────────────────────────────── -->
   <!-- Section 3: Malaysia School State Map        -->
   <!-- ─────────────────────────────────────────── -->
-  <div class="wrapper">
-    <div class="section">
-      <h2>Malaysia's Education Landscape</h2>
-      <p>A closer look at the distribution of primary public schools 
-         across Malaysian states.</p>
-      <div class="single">
-        <div class="chart-box">
-          <div class="chart-inner">
-            <div id="malaysia_map"></div>
+    <div class="wrapper">
+  <div class="section">
+    <h2>How School Distribution Changed Over Time (2017-2022)</h2>
+    <p> Each map shows schools per 1,000 students by state. 
+       Darker states have better school access.</p>
+
+    <div class="four-col">
+
+      <!-- Map 1: 2017-2018 -->
+      <div class="chart-box-centered">
+        <div class="chart-inner">
+          <div id="small_map_1"></div>
+        </div>
+        <!-- ↓ Legend goes HERE, after chart-inner but inside chart-box -->
+        <div class="color-legend">
+          <div class="color-legend-bar"></div>
+          <div class="color-legend-labels">
+            <span>0.5 Low</span>
+            <span>Schools per 1,000 students</span>
+            <span>3.5 High</span>
           </div>
         </div>
       </div>
+
+      <!-- Map 2: 2019-2020 -->
+      <div class="chart-box-centered">
+        <div class="chart-inner s">
+          <div id="small_map_2"></div>
+        </div>
+      <!-- ↓ Legend goes HERE, after chart-inner but inside chart-box -->
+        <div class="color-legend">
+          <div class="color-legend-bar"></div>
+          <div class="color-legend-labels">
+            <span>0.5 Low</span>
+            <span>Schools per 1,000 students</span>
+            <span>3.5 High</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map 3: 2021-2022 -->
+      <div class="chart-box-centered">
+        <div class="chart-inner s">
+          <div id="small_map_3"></div>
+        </div>
+      <!-- ↓ Legend goes HERE, after chart-inner but inside chart-box -->
+        <div class="color-legend">
+          <div class="color-legend-bar"></div>
+          <div class="color-legend-labels">
+            <span>0.5 Low</span>
+            <span>Schools per 1,000 students</span>
+            <span>3.5 High</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legend Container-->
+      <div class="chart-box">
+        <h3>Schools per 1,000 Students</h3>
+        <p>Higher values indicate better school access per student.</p>
+        <p>🔵 Dark blue → More schools per student</p>
+        <p>⬜ Light blue → Fewer schools per student</p>
+        <br>
+        <p><strong>Key Insight:</strong> Sarawak and Pahang have 
+           the highest school access ratios while Selangor and 
+           W.P. Putrajaya have the lowest.</p>
+        <p> School access patterns remain largely consistent from 2017–2022. <p></p>
+          
+      </div>
+
     </div>
   </div>
+</div>
 
   <!-- ─────────────────────────────────────────── -->
   <!-- Section 4: Schools & Enrolment (2 columns)  -->
@@ -168,9 +226,7 @@
 
           <div class="chart-box">
             <h3>School Completion Rate Trend (2016-2022)</h3>
-            <p>Overall completion rates have been improving across all levels. 
-              A notable dip in Secondary Upper completion rate in 2020 reflects 
-              the disruption caused by COVID-19 school closures.</p>
+            <p>Overall completion rates have been improving across all levels. </p>
             <div class="chart-inner">
               <div id="completion_trend"></div>
             </div>
@@ -232,81 +288,6 @@
 
 
 
-
-
-  <div class="wrapper">
-  <div class="section">
-    <h2>How School Distribution Changed Over Time (2017-2022)</h2>
-    <p> Each map shows schools per 1,000 students by state. 
-       Darker states have better school access.</p>
-
-    <div class="four-col">
-
-      <!-- Map 1: 2017-2018 -->
-      <div class="chart-box-centered">
-        <div class="chart-inner">
-          <div id="small_map_1"></div>
-        </div>
-        <!-- ↓ Legend goes HERE, after chart-inner but inside chart-box -->
-        <div class="color-legend">
-          <div class="color-legend-bar"></div>
-          <div class="color-legend-labels">
-            <span>0.5 Low</span>
-            <span>Schools per 1,000 students</span>
-            <span>3.5 High</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Map 2: 2019-2020 -->
-      <div class="chart-box-centered">
-        <div class="chart-inner s">
-          <div id="small_map_2"></div>
-        </div>
-      <!-- ↓ Legend goes HERE, after chart-inner but inside chart-box -->
-        <div class="color-legend">
-          <div class="color-legend-bar"></div>
-          <div class="color-legend-labels">
-            <span>0.5 Low</span>
-            <span>Schools per 1,000 students</span>
-            <span>3.5 High</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Map 3: 2021-2022 -->
-      <div class="chart-box-centered">
-        <div class="chart-inner s">
-          <div id="small_map_3"></div>
-        </div>
-      <!-- ↓ Legend goes HERE, after chart-inner but inside chart-box -->
-        <div class="color-legend">
-          <div class="color-legend-bar"></div>
-          <div class="color-legend-labels">
-            <span>0.5 Low</span>
-            <span>Schools per 1,000 students</span>
-            <span>3.5 High</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Legend Box -->
-      <div class="chart-box">
-        <h3>Schools per 1,000 Students</h3>
-        <p>Higher values indicate better school access per student.</p>
-        <p>🔵 Dark blue → More schools per student</p>
-        <p>⬜ Light blue → Fewer schools per student</p>
-        <br>
-        <p><strong>Key Insight:</strong> Sarawak and Pahang have 
-           the highest school access ratios while Selangor and 
-           W.P. Putrajaya have the lowest.</p>
-        <p> School access varies by geography and population density. <p></p>
-          
-      </div>
-
-    </div>
-  </div>
-</div>
 
   <!-- Footer -->
   <footer>
