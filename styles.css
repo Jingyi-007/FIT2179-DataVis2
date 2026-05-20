@@ -37,16 +37,66 @@
     header {
       font-family: 'Chillax', sans-serif;
       background-color: #1a3a5c;
-      color: #d3dff2;
+      color: white;
       text-align: center;
       padding: 40px 20px;
     }
-    header h1 { font-size: 2.4rem; margin-bottom: 10px; }
-    header p  { font-size: 1.3rem; opacity: 0.85; max-width: 700px; margin: 0 auto; }
+    header h1 { font-size: 2.3rem; margin-bottom: 10px; }
+    header p  { font-size: 1.5rem; opacity: 0.85; max-width: 700px; margin: 0 auto; }
 
     /* ── Wrapper ── */
     .wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
+    /* ── Stats Banner ── */
+.stats-banner {
+  background-color: #f4f6f9;
+  padding: 40px 20px 20px 20px;
+}
+
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stats-card {
+  background: white;
+  border-radius: 10px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stats-card.highlight {
+  border: 2px solid #404959;
+  background: #becae7ea;
+}
+
+.stats-icon {
+  font-size: 1.8rem;
+}
+
+.stats-number {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a3a5c;
+  line-height: 1;
+}
+
+.stats-card.highlight .stats-number {
+  color: #404959;
+}
+
+.stats-desc {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.4;
+}
 
     /* ── Section ── */
     .section { margin: 40px 0; }
@@ -62,7 +112,7 @@
     .section > p {
       font-size: 0.95rem;
       color: #333;
-      margin-bottom: 20px;
+      margin-bottom: 20px 0;  
       line-height: 1.6;
     }
 
