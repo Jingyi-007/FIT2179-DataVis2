@@ -1,15 +1,67 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Global Literacy Rates",
-    "fontSize": 16,
-    "fontWeight": "bold"
+  "width": 900,
+  "height": 450,
+  "projection": {
+    "type": "equalEarth",
+    "scale": {"expr": "zoom_level"},
+    "translate": {"expr": "[width/2 + x_pan, height/2 + y_pan]"}
   },
-  "width": 800,
-  "height": 400,
-  "padding": {"right": 120},
-  "projection": {"type": "equalEarth"},
+  "params": [
+    {
+      "name": "zoom_level",
+      "value": 153,
+      "bind": {
+        "input": "range",
+        "min": 100,
+        "max": 600,
+        "step": 10,
+        "name": "Zoom: "
+      }
+    },
+    {
+      "name": "x_pan",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": -400,
+        "max": 400,
+        "step": 10,
+        "name": "Move Left/Right: "
+      }
+    },
+    {
+      "name": "y_pan",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": -300,
+        "max": 300,
+        "step": 10,
+        "name": "Move Up/Down: "
+      }
+    }
+  ],
   "layer": [
+    {
+      "data": {"sphere": true},
+      "mark": {
+        "type": "geoshape",
+        "fill": "#d4eaf7",
+        "stroke": "#aacfe8",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {"graticule": {"step": [30, 30]}},
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#aacfe8",
+        "strokeWidth": 0.8,
+        "strokeOpacity": 0.5
+      }
+    },
     {
       "data": {
         "url": "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json",

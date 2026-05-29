@@ -7,24 +7,9 @@
       src: url('fonts/Paquito-Variable.ttf') format('truetype');
     }
 
-      @font-face {
+    @font-face {
       font-family: 'GeneralSans';
       src: url('fonts/GeneralSans-Semibold.otf') format('truetype');
-    }
-
-    @font-face {
-      font-family: 'Melodrama';
-      src: url('fonts/Melodrama-Bold.otf') format('truetype');
-    }
-
-    @font-face {
-      font-family: 'FiraSans';
-      src: url('fonts/FiraSans-SemiBold.otf') format('truetype');
-    }
-
-    @font-face {
-      font-family: 'Chillax';
-      src: url('fonts/Chillax-Semibold.otf') format('truetype');
     }
 
     body {
@@ -35,82 +20,98 @@
 
     /* ── Header ── */
     header {
-      font-family: 'Chillax', sans-serif;
+      font-family: 'DM Serif Display', serif;
       background-color: #1a3a5c;
       color: white;
       text-align: center;
       padding: 40px 20px;
     }
-    header h1 { font-size: 2.3rem; margin-bottom: 10px; }
-    header p  { font-size: 1.5rem; opacity: 0.85; max-width: 700px; margin: 0 auto; }
+    header h1 { font-size: 3.5rem; margin-bottom: 10px; }
+    header p  { font-family:'Cormorant';font-size: 1.2rem; opacity: 0.85; max-width: 600px; margin: 0 auto; }
+
+    /* ── Chapter Tag ── */
+  .chapter-tag {
+    display: inline-block;
+    background-color: #c8d9e6;
+    color: #567cbd;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+  }
 
     /* ── Wrapper ── */
     .wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* ── Stats Banner ── */
-.stats-banner {
-  background-color: #f4f6f9;
-  padding: 40px 20px 20px 20px;
-}
+    .stats-banner {
+      background-color: #f4f6f9;
+      padding: 40px 20px 20px 20px;
+    }
 
-.stats-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
+    .stats-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
 
-.stats-card {
-  background: white;
-  border-radius: 10px;
-  padding: 24px 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+    .stats-card {
+      background: white;
+      border-radius: 10px;
+      padding: 24px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
 
-.stats-card.highlight {
-  border: 2px solid #404959;
-  background: #becae7ea;
-}
+    .stats-card.highlight {
+      border: 2px solid #404959;
+      background: #becae7ea;
+    }
 
-.stats-icon {
-  font-size: 1.8rem;
-}
+    .stats-icon {
+      font-size: 1.8rem;
+    }
 
-.stats-number {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #1a3a5c;
-  line-height: 1;
-}
+    .stats-number {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1a3a5c;
+      line-height: 1;
+    }
 
-.stats-card.highlight .stats-number {
-  color: #404959;
-}
+    .stats-card.highlight .stats-number {
+      color: #404959;
+    }
 
-.stats-desc {
-  font-size: 0.88rem;
-  color: #555;
-  line-height: 1.4;
-}
+    .stats-desc {
+      font-family:'Cormorant', sans-serif;
+      font-size: 1.25rem;
+      color: #555;
+      line-height: 1.4;
+    }
 
     /* ── Section ── */
     .section { margin: 40px 0; }
 
     .section > h2 {
-      font-family: 'Poppins', sans-serif;
-      font-size: 1.5rem;
+      font-family: 'DM Serif Display', sans-serif;
+      font-size: 2.0rem;
       color: #1a3a5c;
       margin-bottom: 8px;
       border-left: 4px solid #1a3a5c;
       padding-left: 12px;
     }
     .section > p {
-      font-size: 0.95rem;
+      font-family:'Google Sans Flex', sans-serif;
+      font-size: 1.1rem;
       color: #333;
       margin-bottom: 20px 0;  
       line-height: 1.6;
@@ -125,14 +126,15 @@
       overflow-x: auto;
     }
     .chart-box h3 {
-      font-family:'Inter', sans-serif;
-      font-size: 1.1rem;
+      font-family:'DM Serif Display', sans-serif;
+      font-size: 1.3rem;
       font-weight: 800;
       color: #433021;
       margin-bottom: 6px;
     }
     .chart-box p {
-      font-size: 0.88rem;
+      font-family : 'Google Sans Flex',sans-serif;
+      font-size: 1.0rem;
       color: #555;
       margin-bottom: 14px;
       line-height: 1.5;
@@ -145,8 +147,17 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       display: flex;
       flex-direction: column;
-  align-items: center;       
-  justify-content: flex-end;
+      align-items: center;       
+      justify-content: flex-end;
+      width: 100%; 
+        }
+
+    .chart-box c2{
+      background: white;
+      border-radius: 10px;
+      padding: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      overflow-x: auto;
     }
 
 
@@ -200,12 +211,21 @@
       gap: 20px;
     }
 
+    /* ── Asymmetric Two Column (wider left) ── */
+    .two-col-wide {
+      display: grid;
+      grid-template-columns: 2fr 1fr;    
+      gap: 20px;
+      align-items: stretch;
+    }
+
     /* ── Four Column Layout ── */
     .four-col {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 16px;
       align-items: stretch;
+      justify-items: center; 
     }
 
   /* ── Conclusion ── */
@@ -242,7 +262,7 @@
   }
 
   .conclusion-desc {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Google Sans Flex', sans-serif;
     font-size: 1rem;
     line-height: 1.8;
     opacity: 0.85;

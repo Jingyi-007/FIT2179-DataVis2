@@ -83,3 +83,6 @@ var smallMap3 = "js/small_map_3.vg.json";
 vegaEmbed("#small_map_1", smallMap1).then(function(result) {}).catch(console.error);
 vegaEmbed("#small_map_2", smallMap2).then(function(result) {}).catch(console.error);
 vegaEmbed("#small_map_3", smallMap3).then(function(result) {}).catch(console.error);
+
+var waffleChart = "js/waffle_chart.vg.json";
+vegaEmbed("#waffle_chart", waffleChart).then(function(result) {}).catch(console.error);

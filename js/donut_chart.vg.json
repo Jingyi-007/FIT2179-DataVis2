@@ -5,6 +5,9 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/schools_donut.csv"
   },
+  "transform": [
+    {"filter": "datum.stage != 'Tertiary'"}
+  ],
   "layer": [
     {
       "mark": {
@@ -25,20 +28,20 @@
           "type": "nominal",
           "title": "Education Level",
           "scale": {
-            "domain": ["Primary", "Secondary", "Tertiary"],
-            "range": ["#faf0ca", "#c1dbe8", "#6a4a3a"]
+            "domain": ["Primary", "Secondary"],
+            "range": ["#faf0ca", "#c1dbe8"]
           },
           "legend": {
-          "title": "Education Level",
-          "orient": "bottom",
-          "labelExpr": "datum.label == 'Primary' ? 'Primary (75.9%)' : datum.label == 'Secondary' ? 'Secondary (23.9%)' : 'Tertiary (0.2%)'",
-          "labelFontSize": 13, 
-          "titleFontSize": 14, 
-          "titleColor": "#1a3a5c",  
-          "symbolSize": 120,
-          "rowPadding": 8 ,
-          "titleFontWeight": "bold"
-        }
+            "title": "Education Level",
+            "orient": "bottom",
+            "labelExpr": "datum.label == 'Primary' ? 'Primary (75.9%)' : 'Secondary (23.9%)'",
+            "labelFontSize": 13,
+            "titleFontSize": 14,
+            "titleColor": "#1a3a5c",
+            "symbolSize": 120,
+            "rowPadding": 8,
+            "titleFontWeight": "bold"
+          }
         },
         "tooltip": [
           {"field": "stage", "type": "nominal", "title": "Level"},

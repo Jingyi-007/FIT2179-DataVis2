@@ -5,8 +5,8 @@
     "fontSize": 16,
     "fontWeight": "bold"
   },
-  "width": 600,
-  "height": 450,
+  "width": 500,
+  "height": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/bubble_chart.csv"
   },
@@ -54,9 +54,9 @@
           "type": "quantitative",
           "title": "Number of Schools",
           "axis": {
-            "format": ",",
-            "tickCount": 8
-            }
+    "labelExpr": "datum.value == 0 ? '0' : datum.value >= 1000 ? (datum.value / 1000) + 'K' : datum.value",
+    "tickCount": 8
+  }
         },
         "y": {
           "field": "completion",
@@ -71,9 +71,9 @@
           "title": "Total Students",
           "scale": {"range": [100, 3000]},
           "legend": {
-            "title": "Total Students",
-            "format": ","
-          }
+                    "title": "Total Students",
+                    "labelExpr": "datum.value >= 1000000 ? (datum.value / 1000000) + 'M' : datum.value == 0 ? '0' : (datum.value / 1000) + 'K'"
+                  }
         },
         "color": {
           "field": "region",
@@ -121,7 +121,7 @@
   "mark": {
     "type": "rule",
     "strokeDash": [4, 4],
-    "color": "#fabbc9",
+    "color": "#e8405a",
     "strokeWidth": 1.5
   },
   "encoding": {
@@ -139,7 +139,7 @@
     "align": "center",
     "baseline": "middle",
     "dx": 12,
-    "dy": 16,
+    "dy": 20,
     "fontSize": 10,
     "fontWeight": "bold",
     "color": "#e8405a"

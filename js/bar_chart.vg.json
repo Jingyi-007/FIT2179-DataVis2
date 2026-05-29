@@ -46,7 +46,7 @@
         "domain": ["Top 10", "Malaysia", "Bottom 10"],
         "range": ["#c8d9e6", "#2f4156", "#c8d9e6"]
       },
-      "legend": {"title": "Group"}
+      "legend": null
     },
     "opacity": {
       "condition": {"test": "datum.Country == 'Malaysia'", "value": 1},

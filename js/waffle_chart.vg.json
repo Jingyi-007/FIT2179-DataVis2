@@ -1,0 +1,767 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 350,
+  "height": 350,
+  "data": {
+    "values": [
+      {
+        "id": 0,
+        "row": 0,
+        "col": 0,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 1,
+        "row": 0,
+        "col": 1,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 2,
+        "row": 0,
+        "col": 2,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 3,
+        "row": 0,
+        "col": 3,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 4,
+        "row": 0,
+        "col": 4,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 5,
+        "row": 0,
+        "col": 5,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 6,
+        "row": 0,
+        "col": 6,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 7,
+        "row": 0,
+        "col": 7,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 8,
+        "row": 0,
+        "col": 8,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 9,
+        "row": 0,
+        "col": 9,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 10,
+        "row": 1,
+        "col": 0,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 11,
+        "row": 1,
+        "col": 1,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 12,
+        "row": 1,
+        "col": 2,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 13,
+        "row": 1,
+        "col": 3,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 14,
+        "row": 1,
+        "col": 4,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 15,
+        "row": 1,
+        "col": 5,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 16,
+        "row": 1,
+        "col": 6,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 17,
+        "row": 1,
+        "col": 7,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 18,
+        "row": 1,
+        "col": 8,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 19,
+        "row": 1,
+        "col": 9,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 20,
+        "row": 2,
+        "col": 0,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 21,
+        "row": 2,
+        "col": 1,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 22,
+        "row": 2,
+        "col": 2,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 23,
+        "row": 2,
+        "col": 3,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 24,
+        "row": 2,
+        "col": 4,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 25,
+        "row": 2,
+        "col": 5,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 26,
+        "row": 2,
+        "col": 6,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 27,
+        "row": 2,
+        "col": 7,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 28,
+        "row": 2,
+        "col": 8,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 29,
+        "row": 2,
+        "col": 9,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 30,
+        "row": 3,
+        "col": 0,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 31,
+        "row": 3,
+        "col": 1,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 32,
+        "row": 3,
+        "col": 2,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 33,
+        "row": 3,
+        "col": 3,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 34,
+        "row": 3,
+        "col": 4,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 35,
+        "row": 3,
+        "col": 5,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 36,
+        "row": 3,
+        "col": 6,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 37,
+        "row": 3,
+        "col": 7,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 38,
+        "row": 3,
+        "col": 8,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 39,
+        "row": 3,
+        "col": 9,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 40,
+        "row": 4,
+        "col": 0,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 41,
+        "row": 4,
+        "col": 1,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 42,
+        "row": 4,
+        "col": 2,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 43,
+        "row": 4,
+        "col": 3,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 44,
+        "row": 4,
+        "col": 4,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 45,
+        "row": 4,
+        "col": 5,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 46,
+        "row": 4,
+        "col": 6,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 47,
+        "row": 4,
+        "col": 7,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 48,
+        "row": 4,
+        "col": 8,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 49,
+        "row": 4,
+        "col": 9,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 50,
+        "row": 5,
+        "col": 0,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 51,
+        "row": 5,
+        "col": 1,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 52,
+        "row": 5,
+        "col": 2,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 53,
+        "row": 5,
+        "col": 3,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 54,
+        "row": 5,
+        "col": 4,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 55,
+        "row": 5,
+        "col": 5,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 56,
+        "row": 5,
+        "col": 6,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 57,
+        "row": 5,
+        "col": 7,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 58,
+        "row": 5,
+        "col": 8,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 59,
+        "row": 5,
+        "col": 9,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 60,
+        "row": 6,
+        "col": 0,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 61,
+        "row": 6,
+        "col": 1,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 62,
+        "row": 6,
+        "col": 2,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 63,
+        "row": 6,
+        "col": 3,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 64,
+        "row": 6,
+        "col": 4,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 65,
+        "row": 6,
+        "col": 5,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 66,
+        "row": 6,
+        "col": 6,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 67,
+        "row": 6,
+        "col": 7,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 68,
+        "row": 6,
+        "col": 8,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 69,
+        "row": 6,
+        "col": 9,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 70,
+        "row": 7,
+        "col": 0,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 71,
+        "row": 7,
+        "col": 1,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 72,
+        "row": 7,
+        "col": 2,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 73,
+        "row": 7,
+        "col": 3,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 74,
+        "row": 7,
+        "col": 4,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 75,
+        "row": 7,
+        "col": 5,
+        "stage": "Primary",
+        "label": "76%"
+      },
+      {
+        "id": 76,
+        "row": 7,
+        "col": 6,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 77,
+        "row": 7,
+        "col": 7,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 78,
+        "row": 7,
+        "col": 8,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 79,
+        "row": 7,
+        "col": 9,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 80,
+        "row": 8,
+        "col": 0,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 81,
+        "row": 8,
+        "col": 1,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 82,
+        "row": 8,
+        "col": 2,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 83,
+        "row": 8,
+        "col": 3,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 84,
+        "row": 8,
+        "col": 4,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 85,
+        "row": 8,
+        "col": 5,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 86,
+        "row": 8,
+        "col": 6,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 87,
+        "row": 8,
+        "col": 7,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 88,
+        "row": 8,
+        "col": 8,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 89,
+        "row": 8,
+        "col": 9,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 90,
+        "row": 9,
+        "col": 0,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 91,
+        "row": 9,
+        "col": 1,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 92,
+        "row": 9,
+        "col": 2,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 93,
+        "row": 9,
+        "col": 3,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 94,
+        "row": 9,
+        "col": 4,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 95,
+        "row": 9,
+        "col": 5,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 96,
+        "row": 9,
+        "col": 6,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 97,
+        "row": 9,
+        "col": 7,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 98,
+        "row": 9,
+        "col": 8,
+        "stage": "Secondary",
+        "label": "24%"
+      },
+      {
+        "id": 99,
+        "row": 9,
+        "col": 9,
+        "stage": "Secondary",
+        "label": "24%"
+      }
+    ]
+  },
+  "mark": {
+    "type": "rect",
+    "cornerRadius": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "col",
+      "type": "ordinal",
+      "axis": null
+    },
+    "y": {
+      "field": "row",
+      "type": "ordinal",
+      "axis": null,
+      "sort": "descending"
+    },
+    "color": {
+      "field": "stage",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Primary",
+          "Secondary"
+        ],
+        "range": [
+          "#fbedb2",
+          "#c1dbe8"
+        ]
+      },
+      "legend": {
+        "title": "Education Level",
+        "orient": "bottom",
+        "labelExpr": "datum.label == \"Primary\" ? \"Primary (76%)\" : \"Secondary (24%)\"",
+        "labelFontSize": 12,
+        "titleFontSize": 12
+      }
+    },
+    "tooltip": [
+      {
+        "field": "stage",
+        "type": "nominal",
+        "title": "Level"
+      },
+      {
+        "field": "label",
+        "type": "nominal",
+        "title": "Percentage"
+      }
+    ]
+  },
+  "config": {
+    "view": {
+      "stroke": null
+    },
+    "scale": {
+      "bandPaddingInner": 0.1
+    }
+  }
+}

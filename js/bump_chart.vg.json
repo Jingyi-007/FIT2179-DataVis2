@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 600,
-  "height": 500,
+  "height": 600,
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/bump_chart.csv"
   },
@@ -269,7 +269,7 @@
           "filter": "datum.year == 2016"
         },
         {
-          "calculate": "datum.state == 'Pulau Pinang' ? datum.rank - 0.4 : datum.state == 'W.P. Kuala Lumpur' ? datum.rank + 0.4 : datum.state == 'Negeri Sembilan' ? datum.rank + 0.4 : datum.state == 'W.P. Labuan' ? datum.rank - 0.4 : datum.rank",
+          "calculate": "datum.state == 'Pulau Pinang' ? datum.rank - 0.4 : datum.state == 'W.P. Kuala Lumpur' ? datum.rank + 0.4 : datum.state == 'Negeri Sembilan' ? datum.rank + 0.4 : datum.state == 'W.P. Labuan' ? datum.rank - 0.4 : datum.rank" ,
           "as": "rank_adjusted"
         }
       ],

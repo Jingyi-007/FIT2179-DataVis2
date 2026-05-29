@@ -23,7 +23,10 @@
           "field": "students",
           "type": "quantitative",
           "title": "Number of Students",
-          "axis": {"format": ","}
+          "axis": {
+    "labelExpr": "datum.value >= 1000000 ? (datum.value / 1000000) + 'M' : datum.value == 0 ? '0' : (datum.value / 1000) + 'K'",
+    "tickCount": 8
+  }
         },
         "color": {
           "field": "stage",
@@ -31,7 +34,7 @@
           "title": "Education Level",
           "scale": {
             "domain": ["Primary", "Secondary", "Post Secondary"],
-            "range": ["#faf0ca", "#c1dbe8", "#6a4a3a"]
+            "range": ["#fbedb2", "#c1dbe8", "#6a4a3a"]
           }
         },
         "tooltip": [
@@ -71,7 +74,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Primary", "Secondary", "Post Secondary"],
-            "range":["#faf0ca", "#c1dbe8", "#6a4a3a"]
+            "range":["#fbedb2", "#c1dbe8", "#6a4a3a"]
           }
         }
       }

@@ -11,8 +11,9 @@
   "columns": 3,
   "spacing": 20,  
   "spec": {
-    "width": 320,
-    "height": 270,
+    "width": 400,
+    "height": 480,
+    "padding": {"left": 50},
     "layer": [
       {
         "data": {

@@ -1,10 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 300,
-  "height": 380,
+  "width": 320,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/Jingyi-007/FIT2179-DataVis2/main/data/enrolment_by_state.csv"
   },
+  "transform": [
+  {"filter": "datum.stage != 'Post Secondary'"} 
+],
   "mark": {"type": "bar", "cornerRadiusEnd": 3},
   "encoding": {
     "y": {
@@ -21,15 +24,16 @@
       "field": "students",
       "type": "quantitative",
       "title": "Number of Students",
-      "axis": {"format": ","}
+      "axis": {"labelExpr": "datum.value >= 1000000 ? (datum.value / 1000000) + 'M' : datum.value == 0 ? '0' : (datum.value / 1000) + 'K'",
+    "tickCount": 5}
     },
     "color": {
       "field": "stage",
       "type": "nominal",
       "title": "Education Level",
       "scale": {
-        "domain": ["Primary", "Secondary", "Post Secondary"],
-        "range":["#faf0ca", "#c1dbe8", "#6a4a3a"]
+        "domain": ["Primary", "Secondary"],
+        "range":["#fbedb2", "#c1dbe8"]
       },
       "legend": {"title": "Education Level"}
     },
